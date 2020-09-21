@@ -1,0 +1,15 @@
+.header {
+  min-height: 72px;
+  background-color: #a3d3ca;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-item {
+  max-width: 100px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=header.css.map */
