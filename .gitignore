@@ -1,2 +1,6 @@
 .idea
 *.psd
+*.css.map
+*.css
+!css/styles.css
+!css/normalize.css

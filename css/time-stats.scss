@@ -1,0 +1,32 @@
+.time-stats {
+  padding: 105px 0;
+
+  background: url("../images/time-stats-bg.png") no-repeat center;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 298px;
+    margin-right: 100px;
+
+    color: #fff;
+    font-family: "Montserrat Black", sans-serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 0.764;
+
+    &::after {
+      content: url("../images/curl.png");
+      position: absolute;
+      top: -40px;
+      left: 21px;
+
+      z-index: 2;
+    }
+  }
+}

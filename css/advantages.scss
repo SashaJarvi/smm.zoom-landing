@@ -141,33 +141,44 @@
 }
 
 .why-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
   position: relative;
-  max-width: 200px;
-  height: 135px;
+  width: 200px;
+  //height: 135px;
 
-  &:nth-child(-n+3) {
-    text-align: left;
+  text-align: left;
+
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    margin-top: 94px;
   }
 
-  &:nth-last-of-type(-n+2) {
-    align-items: flex-end;
-
+  &.why-item--right {
     text-align: right;
+
+    .why-item__img {
+      right: 0;
+      left: initial;
+    }
   }
 
   &__img {
     position: absolute;
+    left: 0;
+    max-width: 100%;
 
     z-index: -1;
   }
 
   &__text {
+    padding-top: 80px;
+
     font-size: 15px;
     font-family: "Montserrat Medium", sans-serif;
+  }
+
+  &__number {
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
   }
 }
 
