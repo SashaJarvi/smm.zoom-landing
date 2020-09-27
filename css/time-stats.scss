@@ -1,18 +1,22 @@
 .time-stats {
-  padding: 105px 0;
+  padding: 86px 0;
+  min-height: 380px;
 
   background: url("../images/time-stats-bg.png") no-repeat center;
   background-size: cover;
 
   &__inner {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
+    display: grid;
+    grid-template-columns: 398px 1fr
   }
+
+
 
   &__title {
     position: relative;
-    max-width: 298px;
-    margin-right: 100px;
+    width: 398px;
 
     color: #fff;
     font-family: "Montserrat Black", sans-serif;
@@ -28,5 +32,34 @@
 
       z-index: 2;
     }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 273px;
+
+    &:nth-child(2) {
+      margin-top: 122px;
+    }
+  }
+
+  &__number {
+    color: rgba(124, 161, 154, 0.8);
+    font-family: "Montserrat Black", sans-serif;
+    font-size: 72px;
+    line-height: 0.764;
+    text-transform: uppercase;
+    //text-align: left;
+    //position: absolute;
+    //left: 544.693px;
+    //top: 2660.051px;
+    //width: 213.624px;
+    //height: 52.5px;
+    //z-index: 247;
   }
 }

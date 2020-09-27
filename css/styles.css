@@ -390,18 +390,18 @@ body {
 }
 
 .time-stats {
-  padding: 105px 0;
+  padding: 86px 0;
+  min-height: 380px;
   background: url("../images/time-stats-bg.png") no-repeat center;
   background-size: cover;
 }
 .time-stats__inner {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 398px 1fr;
 }
 .time-stats__title {
   position: relative;
-  max-width: 298px;
-  margin-right: 100px;
+  width: 398px;
   color: #fff;
   font-family: "Montserrat Black", sans-serif;
   font-size: 72px;
@@ -414,6 +414,24 @@ body {
   top: -40px;
   left: 21px;
   z-index: 2;
+}
+.time-stats__list {
+  display: flex;
+  align-items: center;
+}
+.time-stats__item {
+  position: relative;
+  max-width: 273px;
+}
+.time-stats__item:nth-child(2) {
+  margin-top: 122px;
+}
+.time-stats__number {
+  color: rgba(124, 161, 154, 0.8);
+  font-family: "Montserrat Black", sans-serif;
+  font-size: 72px;
+  line-height: 0.764;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
