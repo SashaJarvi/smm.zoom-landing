@@ -1,4 +1,6 @@
 .services {
+  padding-bottom: 100px;
+
   text-align: center;
 
   &__title {
@@ -39,21 +41,47 @@
     flex-wrap: wrap;
 
     padding: 0 100px;
-    width: 100%;
+    margin-bottom: 10px;
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 300px;
     min-height: 210px;
 
-    padding: 46px 32px 25px;
+    padding: 46px 24px 25px;
     margin-bottom: 50px;
 
     color: #f5fbfb;
 
-    background-color: #a5d6cd
+    border-radius: 10px;
+    background-image: -moz-linear-gradient(-90deg, rgb(134, 172, 164) 0%, rgb(150, 193, 185) 30%, rgb(165, 214, 205) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(134, 172, 164) 0%, rgb(150, 193, 185) 30%, rgb(165, 214, 205) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(134, 172, 164) 0%, rgb(150, 193, 185) 30%, rgb(165, 214, 205) 100%);
+    box-shadow: 0 1px 8.64px 0.36px rgba(158, 199, 190, 0.004),
+    inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+  }
+
+  &__item-img-wrapper {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: rgb(245, 251, 251);
+    border-radius: 50%;
+    box-shadow: 1.169px 3.825px 5px 0 rgba(0, 0, 0, 0.15);
+    z-index: 2;
+
+    transform: translate(-50%, 0);
   }
 
   &__item-text {
@@ -68,7 +96,12 @@
   }
 
   &__item-price {
-    font-size: 36px;
     font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 36px;
+  }
+
+  &__about-text {
+    display: inline-block;
+    max-width: 53%;
   }
 }

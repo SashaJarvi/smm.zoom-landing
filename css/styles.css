@@ -204,7 +204,7 @@ body {
 .intro {
   padding: 44px 0 66px;
   text-align: center;
-  background: url("../images/intro-bg1.png") no-repeat center -104px;
+  background: url("../images/intro-bg1.png") no-repeat center -72px;
   background-size: cover;
 }
 .intro__img {
@@ -445,6 +445,7 @@ body {
 }
 
 .services {
+  padding-bottom: 100px;
   text-align: center;
 }
 .services__title {
@@ -486,17 +487,37 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 100px;
-  width: 100%;
+  margin-bottom: 10px;
 }
 .services__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
   min-height: 210px;
-  padding: 46px 32px 25px;
+  padding: 46px 24px 25px;
   margin-bottom: 50px;
   color: #f5fbfb;
-  background-color: #a5d6cd;
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(-90deg, #86aca4 0%, #96c1b9 30%, #a5d6cd 100%);
+  background-image: -webkit-linear-gradient(-90deg, #86aca4 0%, #96c1b9 30%, #a5d6cd 100%);
+  background-image: -ms-linear-gradient(-90deg, #86aca4 0%, #96c1b9 30%, #a5d6cd 100%);
+  box-shadow: 0 1px 8.64px 0.36px rgba(158, 199, 190, 0.004), inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+}
+.services__item-img-wrapper {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #f5fbfb;
+  border-radius: 50%;
+  box-shadow: 1.169px 3.825px 5px 0 rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transform: translate(-50%, 0);
 }
 .services__item-text {
   display: flex;
@@ -507,8 +528,12 @@ body {
   line-height: 1;
 }
 .services__item-price {
-  font-size: 36px;
   font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 36px;
+}
+.services__about-text {
+  display: inline-block;
+  max-width: 53%;
 }
 
 /*# sourceMappingURL=styles.css.map */
