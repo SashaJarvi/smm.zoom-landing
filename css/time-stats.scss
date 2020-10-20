@@ -1,6 +1,4 @@
 .time-stats {
-  padding: 105px 0;
-
   background: url("../images/time-stats-bg.png") no-repeat center;
   background-size: cover;
 
@@ -12,7 +10,7 @@
   &__title {
     position: relative;
     max-width: 298px;
-    margin-right: 100px;
+    margin-right: 105px;
 
     color: #fff;
     font-family: "Montserrat Black", sans-serif;
@@ -27,6 +25,41 @@
       left: 21px;
 
       z-index: 2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 105px 0;
+  }
+
+  &__item {
+    max-width: 272px;
+
+    &:nth-of-type(2) {
+      margin-top: 124px;
+    }
+  }
+
+  &__number {
+    color: rgba(124, 161, 150, 0.8);
+    font-family: "Montserrat Black", sans-serif;
+    font-size: 72px;
+  }
+
+  &__text {
+    color: #fff;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 15px;
+
+    &--top {
+      transform: translate(-25px, 26px);
+    }
+
+    &--bottom {
+      transform: translate(10px, -26px);
     }
   }
 }

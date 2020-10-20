@@ -7,7 +7,6 @@
     align-items: center;
 
     min-height: 72px;
-
   }
 
   &__logo {
@@ -49,11 +48,16 @@
 
     font-size: 14px;
 
-    border: none;
+    border: 1px solid transparent;
     border-radius: 12px;
-    box-shadow:
-            0 1px 2.97px 0.03px rgba(136, 172, 164, 0.004),
-            inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+    box-shadow: 0 1px 2.97px 0.03px rgba(136, 172, 164, 0.004),
+    inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+
+    transition: all .3s;
+
+    &:hover, &:focus {
+      border-color: #fff;
+    }
 
     .btn__icon {
       margin-right: 4px;

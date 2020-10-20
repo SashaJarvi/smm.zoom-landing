@@ -1,0 +1,15 @@
+@mixin zoom-text-bg {
+  &::before {
+    content: url("../images/zoom-text-left.png");
+    position: absolute;
+    left: -40px;
+    top: 0;
+  }
+
+  &::after {
+    content: url("../images/zoom-text-right.png");
+    position: absolute;
+    right: -40px;
+    top: 0;
+  }
+}

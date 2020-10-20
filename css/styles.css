@@ -189,9 +189,13 @@ body {
   align-items: center;
   padding: 4px 6px;
   font-size: 14px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   box-shadow: 0 1px 2.97px 0.03px rgba(136, 172, 164, 0.004), inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+  transition: all 0.3s;
+}
+.header__feedback-btn:hover, .header__feedback-btn:focus {
+  border-color: #fff;
 }
 .header__feedback-btn .btn__icon {
   margin-right: 4px;
@@ -200,7 +204,7 @@ body {
 .intro {
   padding: 44px 0 66px;
   text-align: center;
-  background: url("../images/intro-bg1.png") no-repeat center -72px;
+  background: url("../images/intro-bg1.png") no-repeat center -104px;
   background-size: cover;
 }
 .intro__img {
@@ -232,13 +236,14 @@ body {
   transform: translateY(-50%);
 }
 .intro__btn {
+  position: relative;
   width: 304px;
   height: 48px;
   color: #fff;
   font-family: "Montserrat Medium", sans-serif;
   font-weight: 500;
   line-height: 1.5;
-  border: 2px solid #a5d6cd;
+  border: none;
   border-radius: 24px;
   background-image: linear-gradient(90deg, #86aca4 0%, #96c1b9 30%, #a5d6cd 100%);
   box-shadow: inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
@@ -246,9 +251,7 @@ body {
   transition: all 0.3s;
 }
 .intro__btn:hover, .intro__btn:focus {
-  color: #86aca4;
-  background-image: linear-gradient(90deg, rgba(134, 172, 164, 0) 0%, rgba(150, 193, 185, 0) 30%, rgba(165, 214, 205, 0) 100%);
-  border: 2px solid #a5d6cd;
+  background-image: linear-gradient(90deg, #86aca4 0%, #86aca4 100%);
   box-shadow: none;
 }
 
@@ -278,7 +281,6 @@ body {
   margin-bottom: 45px;
   font-family: "Montserrat Bold", sans-serif;
   font-size: 30px;
-  text-align: center;
 }
 .advantages__title::after {
   content: "";
@@ -390,7 +392,6 @@ body {
 }
 
 .time-stats {
-  padding: 105px 0;
   background: url("../images/time-stats-bg.png") no-repeat center;
   background-size: cover;
 }
@@ -401,7 +402,7 @@ body {
 .time-stats__title {
   position: relative;
   max-width: 298px;
-  margin-right: 100px;
+  margin-right: 105px;
   color: #fff;
   font-family: "Montserrat Black", sans-serif;
   font-size: 72px;
@@ -414,6 +415,96 @@ body {
   top: -40px;
   left: 21px;
   z-index: 2;
+}
+.time-stats__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 105px 0;
+}
+.time-stats__item {
+  max-width: 272px;
+}
+.time-stats__item:nth-of-type(2) {
+  margin-top: 124px;
+}
+.time-stats__number {
+  color: rgba(124, 161, 150, 0.8);
+  font-family: "Montserrat Black", sans-serif;
+  font-size: 72px;
+}
+.time-stats__text {
+  color: #fff;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 15px;
+}
+.time-stats__text--top {
+  transform: translate(-25px, 26px);
+}
+.time-stats__text--bottom {
+  transform: translate(10px, -26px);
+}
+
+.services {
+  text-align: center;
+}
+.services__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 65px;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 30px;
+}
+.services__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-right: -50%;
+  height: 2px;
+  width: 84%;
+  background-color: #2d2b2b;
+  transform: translate(-50%, 0);
+}
+.services__inner {
+  position: relative;
+}
+.services__inner::before {
+  content: url("../images/zoom-text-left.png");
+  position: absolute;
+  left: -40px;
+  top: 0;
+}
+.services__inner::after {
+  content: url("../images/zoom-text-right.png");
+  position: absolute;
+  right: -40px;
+  top: 0;
+}
+.services__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 100px;
+  width: 100%;
+}
+.services__item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  padding: 50px 32px 25px;
+  margin-bottom: 50px;
+  color: #f5fbfb;
+  background-color: #a5d6cd;
+}
+.services__item-text {
+  flex: 1 0 auto;
+  font-size: 20px;
+  font-family: "Montserrat Medium", sans-serif;
+}
+.services__item-price {
+  font-size: 36px;
+  font-family: "Montserrat SemiBold", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
