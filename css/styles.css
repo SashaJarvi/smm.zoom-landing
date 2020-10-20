@@ -492,15 +492,19 @@ body {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
-  padding: 50px 32px 25px;
+  min-height: 210px;
+  padding: 46px 32px 25px;
   margin-bottom: 50px;
   color: #f5fbfb;
   background-color: #a5d6cd;
 }
 .services__item-text {
+  display: flex;
+  align-items: center;
   flex: 1 0 auto;
-  font-size: 20px;
   font-family: "Montserrat Medium", sans-serif;
+  font-size: 20px;
+  line-height: 1;
 }
 .services__item-price {
   font-size: 36px;
