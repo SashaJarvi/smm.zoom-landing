@@ -202,9 +202,21 @@ body {
 }
 
 .intro {
-  padding: 44px 0 66px;
+  position: relative;
+  padding: 44px 0 99px;
   text-align: center;
-  background: url("../images/intro-bg1.png") no-repeat center -72px;
+  background: url("../images/intro-bg.jpg") no-repeat center -72px;
+  background-size: cover;
+}
+.intro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 106px;
+  background: url("../images/figures/wave.png") no-repeat center;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 .intro__img {
@@ -392,8 +404,31 @@ body {
 }
 
 .time-stats {
-  background: url("../images/time-stats-bg.png") no-repeat center;
+  position: relative;
+  background: linear-gradient(rgba(165, 214, 205, 0.8), rgba(165, 214, 205, 0.8)), url("../images/time-stats-bg.jpg") no-repeat center;
   background-size: cover;
+}
+.time-stats::before, .time-stats::after {
+  content: "";
+  position: absolute;
+}
+.time-stats::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 37px;
+  background: url("../images/figures/triangle-top-1.png") no-repeat left center;
+  background-size: cover;
+  z-index: 2;
+}
+.time-stats::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 37px;
+  background: url("../images/figures/triangle-bottom-1.png") no-repeat left center;
+  background-size: cover;
+  z-index: 2;
 }
 .time-stats__inner {
   display: flex;
