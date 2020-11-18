@@ -22,15 +22,14 @@
     &::after {
       content: "";
       position: absolute;
-
       left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, 0);
 
       height: 2px;
       width: 69%;
 
       background-color: #2d2b2b;
+
+      transform: translate(-50%, 0);
     }
 
     &--top::after {

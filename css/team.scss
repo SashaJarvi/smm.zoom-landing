@@ -1,0 +1,60 @@
+.team {
+  text-align: center;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: px-to-rem(44px);
+
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: px-to-rem(30px);
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 50%;
+      bottom: -10px;
+
+      height: 2px;
+      width: 84%;
+
+      background-color: #2d2b2b;
+
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &__members {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  &__member {
+    flex: 1 1 25%;
+    margin-bottom: px-to-rem(56px);
+
+    text-align: center;
+  }
+
+  &__member-photo {
+    display: inline-block;
+    margin-bottom: px-to-rem(22px);
+
+    border-radius: 50%;
+  }
+
+  &__member-name {
+    margin-bottom: px-to-rem(8px);
+
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: px-to-rem(18px);
+  }
+
+  &__member-position {
+    font-family: "Montserrat Medium", sans-serif;
+    font-size: px-to-rem(15px);
+  }
+}

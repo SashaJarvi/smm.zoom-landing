@@ -6,11 +6,11 @@
     justify-content: space-between;
     align-items: center;
 
-    min-height: 72px;
+    min-height: px-to-rem(72px);
   }
 
   &__logo {
-    padding: 0 24px;
+    padding: 0 px-to-rem(24px);
   }
 
   &__nav {
@@ -23,14 +23,14 @@
     align-items: center;
     flex: 1;
 
-    padding-right: 46px;
+    padding-right: px-to-rem(46px);
   }
 
   &__nav-item {
-    max-width: 100px;
+    max-width: px-to-rem(100px);
     padding: 0 10px;
 
-    font-size: 14px;
+    font-size: px-to-rem(14px);
     text-align: center;
   }
 
@@ -44,12 +44,12 @@
     display: flex;
     align-items: center;
 
-    padding: 4px 6px;
+    padding: px-to-rem(4px) px-to-rem(6px);
 
-    font-size: 14px;
+    font-size: px-to-rem(14px);
 
     border: 1px solid transparent;
-    border-radius: 12px;
+    border-radius: px-to-rem(12px);
     box-shadow: 0 1px 2.97px 0.03px rgba(136, 172, 164, 0.004),
     inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
 
@@ -60,7 +60,7 @@
     }
 
     .btn__icon {
-      margin-right: 4px;
+      margin-right: px-to-rem(4px);
     }
   }
 }
