@@ -1,11 +1,46 @@
 .know-more {
+  position: relative;
+
+  padding: px-to-rem(34px) 0;
+
+  background: url("../images/know-more-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  z-index: 1;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: px-to-rem(34px);
+
+    background: #fff;
+
+    z-index: 2;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
   &__form {
-    padding: px-to-rem(64px) px-to-rem(56px) px-to-rem(46px);
+    position: relative;
+    padding: px-to-rem(42px) px-to-rem(56px) px-to-rem(46px);
+    margin: px-to-rem(-34px) px-to-rem(0px);
     width: px-to-rem(418px);
 
     color: #f5fbfb;
 
     background: #a5d6cd;
+
+    z-index: 3;
 
     .form__title {
       display: inline-block;
@@ -20,7 +55,7 @@
     }
 
     .form__subtitle {
-      margin-bottom: px-to-rem(8px);
+      margin-bottom: px-to-rem(14px);
 
       font-family: "Montserrat Medium", sans-serif;
       font-size: px-to-rem(18px);

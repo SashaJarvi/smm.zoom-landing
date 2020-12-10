@@ -1,6 +1,12 @@
 .team {
   text-align: center;
 
+  &__inner {
+    position: relative;
+
+    @include zoom-text-bg;
+  }
+
   &__title {
     position: relative;
     display: inline-block;

@@ -1,0 +1,27 @@
+.footer {
+  padding: px-to-rem(80px) 0 px-to-rem(34px);
+
+  background-color: rgba(165, 214, 205, .8);
+
+  &__inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    color: #fff;
+  }
+
+  &__info {
+    &--left {
+      max-width: px-to-rem(354px);
+    }
+
+    &--right {
+      max-width: px-to-rem(498px);
+    }
+  }
+
+  &__paragraph, &__link, &__copyright {
+    line-height: 1.875;
+  }
+}

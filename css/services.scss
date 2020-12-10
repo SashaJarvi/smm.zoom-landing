@@ -3,6 +3,12 @@
 
   text-align: center;
 
+  &__inner {
+    position: relative;
+
+    @include zoom-text-bg;
+  }
+
   &__title {
     position: relative;
     display: inline-block;
@@ -25,12 +31,6 @@
 
       transform: translate(-50%, 0);
     }
-  }
-
-  &__inner {
-    position: relative;
-
-    @include zoom-text-bg;
   }
 
   &__list {
