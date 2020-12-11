@@ -1,1 +1,3 @@
-console.log('i am js')
+const swiper = new Swiper('.examples__img-wrapper', {
+  slidesPerView: 'auto',
+});

@@ -6,6 +6,7 @@
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SMM Zoom</title>
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -172,7 +173,7 @@
     </div>
   </section>
 
-  <section class="services">
+  <section class="services" id="services">
     <div class="container">
       <div class="services__inner">
         <h2 class="services__title">Наши <span class="capitalize">УСЛУГИ</span></h2>
@@ -251,8 +252,20 @@
   <section class="examples" id="examples">
     <div class="container">
       <div class="examples__inner">
-        <h2 class="examples__title">Примеры работ:</h2>
-        <div class="examples__images"></div>
+        <h2 class="examples__title">Примеры <span class="examples__title-word">работ:</span></h2>
+
+        <div class="examples__images">
+          <div class="examples__img-wrapper swiper-container">
+            <div class="swiper-wrapper">
+              <img src="images/examples-1.png" alt="ЭКО-отель Green Wood" class="examples__img swiper-slide">
+              <img src="images/examples-2.png" alt="Мебель из массива Москва и МО" class="examples__img swiper-slide">
+              <img src="images/examples-3.png" alt="Мебельная фабрика Марибель" class="examples__img swiper-slide">
+              <img src="images/examples-4.png" alt="Кухни | шкафы-купе Тюмень" class="examples__img swiper-slide">
+              <img src="images/examples-5.png" alt="Ателье мебели Maestro Alberi" class="examples__img swiper-slide">
+              <img src="images/examples-6.png" alt="Breathoftime производство | Россия | Москва" class="examples__img swiper-slide">
+              <img src="images/examples-7.png" alt="I wood like" class="examples__img swiper-slide"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -426,6 +439,7 @@
   </div>
 </footer>
 
+<script src="libs/swiper/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

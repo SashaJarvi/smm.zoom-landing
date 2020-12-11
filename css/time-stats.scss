@@ -12,21 +12,16 @@
   }
 
   &__title {
-    position: relative;
-    max-width: 298px;
-    margin-right: 105px;
+    max-width: px-to-rem(298px);
+    margin-right: px-to-rem(105px);
 
-    color: #fff;
-    font-family: "Montserrat Black", sans-serif;
-    font-size: 72px;
-    text-transform: uppercase;
-    line-height: 0.764;
+    @include curly-header;
 
     &::after {
-      content: url("../images/curl.png");
+      content: url("../images/time-stats-curl.png");
       position: absolute;
-      top: -40px;
-      left: 21px;
+      top: px-to-rem(-40px);
+      left: px-to-rem(21px);
 
       z-index: 2;
     }
@@ -36,34 +31,34 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 105px 0;
+    padding: px-to-rem(105px) 0;
   }
 
   &__item {
-    max-width: 272px;
+    max-width: px-to-rem(272px);
 
     &:nth-of-type(2) {
-      margin-top: 124px;
+      margin-top: px-to-rem(124px);
     }
   }
 
   &__number {
     color: rgba(124, 161, 150, 0.8);
     font-family: "Montserrat Black", sans-serif;
-    font-size: 72px;
+    font-size: px-to-rem(72px);
   }
 
   &__text {
     color: #fff;
     font-family: "Montserrat Bold", sans-serif;
-    font-size: 15px;
+    font-size: px-to-rem(15px);
 
     &--top {
-      transform: translate(-25px, 26px);
+      transform: translate(px-to-rem(-25px), px-to-rem(26px));
     }
 
     &--bottom {
-      transform: translate(10px, -26px);
+      transform: translate(px-to-rem(10px), px-to-rem(-26px));
     }
   }
 }
