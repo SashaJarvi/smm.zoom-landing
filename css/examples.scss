@@ -48,29 +48,23 @@
     transform: translateX(px-to-rem(18px));
   }
 
-  &__img-wrapper {
-    position: relative;
+  .swiper-container {
+    width: px-to-rem(434px);
+    height: px-to-rem(581px);
 
     background: url("../images/examples-img-wrapper.png") no-repeat center;
-
-    &.swiper-container {
-      width: 291px;
-      height: 581px;
-    }
-
-    .swiper-wrapper {
-      width: 255px;
-      height: 553px;
-      padding: 14px 18px;
-      justify-content: center;
-      align-items: center;
-    }
+    background-size: contain;
   }
 
-  &__img {
-    &.swiper-slide {
-      //width: 255px;
-      //height: 553px;
-    }
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: px-to-rem(255px);
+    height: px-to-rem(553px);
+
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
