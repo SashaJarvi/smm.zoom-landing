@@ -1,9 +1,26 @@
 .footer {
+  position: relative;
   padding: px-to-rem(80px) 0 px-to-rem(34px);
 
-  background-color: rgba(165, 214, 205, .8);
+  background-color: #b7ded7;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #acd9d1;
+    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  }
 
   &__inner {
+    position: relative;
+
     display: flex;
     align-items: baseline;
     justify-content: space-between;
