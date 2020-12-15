@@ -406,8 +406,11 @@
         </div>
 
         <div class="form__form-group">
-          <input type="checkbox" class="form__checkbox" id="agree">
-          <label class="form__label" for="agree">Я согласен с политикой конфиденциальности</label>
+          <label class="checkbox" for="agree">
+            <input type="checkbox" class="checkbox__real" id="agree">
+            <span class="checkbox__fake"></span>
+            <span class="checkbox__title">Я согласен с политикой конфиденциальности</span>
+          </label>
         </div>
 
         <button class="form__btn" type="submit">Получить предложение</button>

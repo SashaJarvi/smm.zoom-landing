@@ -20,9 +20,9 @@
       position: absolute;
 
       left: 50%;
-      bottom: -10px;
+      bottom: px-to-rem(-10px);
 
-      height: 2px;
+      height: px-to-rem(2px);
       width: 84%;
 
       background-color: #2d2b2b;
@@ -36,6 +36,8 @@
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+
+    padding: 0 px-to-rem(100px);
   }
 
   &__member {
@@ -43,6 +45,12 @@
     margin-bottom: px-to-rem(56px);
 
     text-align: center;
+
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &__member-photo {
