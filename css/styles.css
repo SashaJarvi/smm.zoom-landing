@@ -117,7 +117,8 @@ body {
   font-family: "Montserrat Regular", sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: hidden; }
 
 .container {
   max-width: 75rem;
@@ -664,6 +665,60 @@ body {
       transition: background-color .3s; }
       .know-more__form .form__btn:hover, .know-more__form .form__btn:focus {
         background-color: #3e5b55; }
+
+.contacts {
+  position: relative;
+  padding: 2.25rem 0 5.875rem;
+  text-align: center;
+  overflow: hidden; }
+  .contacts::before, .contacts::after {
+    content: "";
+    position: absolute;
+    width: 15.75rem;
+    height: 15.6875rem;
+    background: url("../images/heart.svg") no-repeat center; }
+  .contacts::before {
+    top: 0;
+    left: -5.375rem; }
+  .contacts::after {
+    top: 6.4375rem;
+    right: -3.4375rem; }
+  .contacts__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4.375rem;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 1.875rem;
+    line-height: 1.2; }
+    .contacts__title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -0.625rem;
+      height: 2px;
+      width: 62%;
+      background-color: #2d2b2b;
+      transform: translate(-50%, 0); }
+  .contacts__items {
+    display: flex;
+    justify-content: center; }
+  .contacts__group {
+    display: flex;
+    flex-direction: column-reverse; }
+    .contacts__group + .contacts__group {
+      margin-left: 1.25rem; }
+  .contacts__group-title {
+    margin-top: 1.375rem;
+    color: #86aca4;
+    font-family: "Caveat Bold", sans-serif;
+    font-size: 1.875rem;
+    line-height: 0.8; }
+  .contacts__group-item + .contacts__group-item {
+    margin-left: 3.4375rem; }
+  .contacts__group-item svg feFlood {
+    transition: flood-color 0.2s; }
+  .contacts__group-item:hover svg feFlood, .contacts__group-item:focus svg feFlood {
+    flood-color: #3e5b55; }
 
 .footer {
   position: relative;
