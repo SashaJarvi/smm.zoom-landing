@@ -117,12 +117,31 @@ body {
   font-family: "Montserrat Regular", sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  background-color: #fff;
-  overflow: hidden; }
+  background-color: #fff; }
 
 .container {
   max-width: 75rem;
   margin: 0 auto; }
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0;
+  background-color: #a5d6cd;
+  border: none;
+  border-radius: 50%;
+  outline: none; }
+  .slider-arrow.slick-disabled {
+    opacity: 0.7; }
+    .slider-arrow.slick-disabled svg path {
+      fill: #8ab1aa; }
+  .slider-arrow__prev {
+    transform: rotate(180deg); }
 
 .header {
   background-color: #a3d3ca; }
@@ -474,43 +493,82 @@ body {
   .examples__title-word {
     display: inline-block;
     transform: translateX(1.125rem); }
-  .examples .swiper-container {
-    max-width: 27.125rem;
-    height: 36.3125rem;
-    background: url("../images/examples-img-wrapper.png") no-repeat center;
-    background-size: contain; }
-  .examples .swiper-wrapper {
-    align-items: center; }
-  .examples .swiper-slide {
-    width: 15.9375rem;
-    height: 34.5625rem;
-    background-position: center center;
-    background-repeat: no-repeat; }
-  .examples .swiper-button-prev,
-  .examples .swiper-button-next {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: 0;
-    background-color: #a5d6cd;
-    border-radius: 50%; }
-    .examples .swiper-button-prev::after,
-    .examples .swiper-button-next::after {
-      display: none; }
-    .examples .swiper-button-prev.swiper-button-disabled,
-    .examples .swiper-button-next.swiper-button-disabled {
-      opacity: 1; }
-      .examples .swiper-button-prev.swiper-button-disabled .swiper-button__icon path,
-      .examples .swiper-button-next.swiper-button-disabled .swiper-button__icon path {
-        fill: #8ab1aa; }
-  .examples .swiper-button__icon {
+  .examples__images {
     display: flex;
+    justify-content: center;
+    width: 27.0625rem; }
+  .examples__slider {
+    display: flex;
+    width: 18.1875rem;
+    height: 36.4375rem;
+    margin: 0 auto;
+    background: url("https://i.postimg.cc/BZgcjsmX/examples-img-wrapper.png") no-repeat center; }
+  .examples__slider-item {
+    display: flex !important;
+    height: 36.4375rem;
     align-items: center;
-    justify-content: space-between; }
-  .examples .swiper-button-prev {
-    left: 0;
-    transform: rotate(180deg); }
-  .examples .swiper-button-next {
-    right: 0; }
+    justify-content: center; }
+  .examples__slider-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; }
+  .examples .slider-arrow__prev {
+    left: -4.25rem; }
+  .examples .slider-arrow__next {
+    right: -4.25rem; }
+
+.visual {
+  padding: 3.75rem 0 2.625rem;
+  text-align: center; }
+  .visual__inner {
+    position: relative; }
+    .visual__inner::before {
+      content: url("../images/zoom-text-left.png");
+      position: absolute;
+      left: -40px;
+      top: 0; }
+    .visual__inner::after {
+      content: url("../images/zoom-text-right.png");
+      position: absolute;
+      right: -40px;
+      top: 0; }
+  .visual__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4.625rem;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 1.875rem; }
+    .visual__title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -0.625rem;
+      height: 0.125rem;
+      width: 84%;
+      background-color: #2d2b2b;
+      transform: translate(-50%, 0); }
+  .visual__slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 62.375rem;
+    height: 37.9375rem;
+    margin: 0 auto;
+    background-color: #a5d6cd; }
+  .visual__slider-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+  .visual__slider-img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover; }
+  .visual .slider-arrow__prev {
+    left: -4.6875rem; }
+  .visual .slider-arrow__next {
+    right: -4.6875rem; }
 
 .team {
   text-align: center; }

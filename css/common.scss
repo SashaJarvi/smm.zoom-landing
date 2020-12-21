@@ -34,10 +34,41 @@ body {
 
   background-color: #fff;
 
-  overflow: hidden;
 }
 
 .container {
   max-width: px-to-rem(1200px);
   margin: 0 auto;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: px-to-rem(40px);
+  height: px-to-rem(40px);
+
+  margin-top: 0;
+
+  background-color: #a5d6cd;
+  border: none;
+  border-radius: 50%;
+
+  outline: none;
+
+  &.slick-disabled {
+    opacity: 0.7;
+
+    svg path {
+      fill: #8ab1aa;
+    }
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
 }
