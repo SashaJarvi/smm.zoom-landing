@@ -2,8 +2,3 @@
 css/.sass-cache
 *.psd
 *.css.map
-*.css
-
-!libs/*/*.css
-!css/styles.css
-!css/normalize.css
