@@ -147,8 +147,9 @@ body {
 }
 
 .container {
-  max-width: 75rem;
+  max-width: 78rem;
   margin: 0 auto;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 .slider-arrow {
@@ -886,20 +887,48 @@ body {
   text-align: center;
   overflow: hidden;
 }
+@media screen and (max-width: 1200px) {
+  .contacts {
+    padding: 3.5rem 0 9.1875rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .contacts {
+    padding: 20px 0 25px;
+  }
+}
 .contacts::before, .contacts::after {
   content: "";
   position: absolute;
   width: 15.75rem;
   height: 15.6875rem;
   background: url("../images/heart.svg") no-repeat center;
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 1200px) {
+  .contacts::before, .contacts::after {
+    width: 8.5625rem;
+    height: 8.5625rem;
+  }
 }
 .contacts::before {
   top: 0;
   left: -5.375rem;
 }
+@media screen and (max-width: 1200px) {
+  .contacts::before {
+    left: -3.4375rem;
+  }
+}
 .contacts::after {
-  top: 6.4375rem;
   right: -3.4375rem;
+  bottom: 0.25rem;
+}
+@media screen and (max-width: 1200px) {
+  .contacts::after {
+    right: -2.0625rem;
+    bottom: 0.125rem;
+  }
 }
 .contacts__title {
   position: relative;
@@ -908,6 +937,21 @@ body {
   font-family: "Montserrat Bold", sans-serif;
   font-size: 1.875rem;
   line-height: 1.2;
+}
+@media screen and (max-width: 720px) {
+  .contacts__title {
+    margin-bottom: 2.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contacts__title {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .contacts__title {
+    font-size: 1rem;
+  }
 }
 .contacts__title::after {
   content: "";
@@ -923,12 +967,32 @@ body {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 720px) {
+  .contacts__items {
+    flex-direction: column;
+  }
+}
 .contacts__group {
   display: flex;
   flex-direction: column-reverse;
 }
+@media screen and (max-width: 720px) {
+  .contacts__group {
+    margin-bottom: 1.375rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .contacts__group:last-child {
+    margin-bottom: 0rem;
+  }
+}
 .contacts__group + .contacts__group {
   margin-left: 1.25rem;
+}
+@media screen and (max-width: 720px) {
+  .contacts__group + .contacts__group {
+    margin-left: 0;
+  }
 }
 .contacts__group-title {
   margin-top: 1.375rem;
@@ -937,8 +1001,33 @@ body {
   font-size: 1.875rem;
   line-height: 0.8;
 }
+@media screen and (max-width: 720px) {
+  .contacts__group-title {
+    margin-top: 0.625rem;
+  }
+}
+.contacts__group-item {
+  width: 2.875rem;
+  height: 2.875rem;
+}
+@media screen and (max-width: 414px) {
+  .contacts__group-item {
+    width: 2.375rem;
+    height: 2.375rem;
+  }
+}
 .contacts__group-item + .contacts__group-item {
   margin-left: 3.4375rem;
+}
+@media screen and (max-width: 414px) {
+  .contacts__group-item + .contacts__group-item {
+    margin-left: 2.625rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .contacts__group-item + .contacts__group-item {
+    margin-left: 2.125rem;
+  }
 }
 .contacts__group-item svg feFlood {
   transition: flood-color 0.2s;
@@ -952,6 +1041,11 @@ body {
   padding: 5rem 0 2.125rem;
   background-color: #b7ded7;
 }
+@media screen and (max-width: 962px) {
+  .footer {
+    padding: 3.25rem 0;
+  }
+}
 .footer::before {
   content: "";
   position: absolute;
@@ -960,7 +1054,17 @@ body {
   width: 100%;
   height: 100%;
   background-color: #acd9d1;
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+}
+@media screen and (max-width: 1366px) {
+  .footer::before {
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer::before {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  }
 }
 .footer__inner {
   position: relative;
@@ -969,11 +1073,28 @@ body {
   justify-content: space-between;
   color: #fff;
 }
+@media screen and (max-width: 962px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer__info {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .footer__info {
+    font-size: 0.75rem;
+  }
+}
 .footer__info--left {
   max-width: 22.125rem;
 }
 .footer__info--right {
+  align-self: flex-end;
   max-width: 31.125rem;
+  text-align: right;
 }
 .footer__paragraph, .footer__link, .footer__copyright {
   line-height: 1.875;

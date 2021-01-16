@@ -37,8 +37,9 @@ body {
 }
 
 .container {
-  max-width: px-to-rem(1200px);
+  max-width: px-to-rem(1248px);
   margin: 0 auto;
+  padding: 0 px-to-rem(24px) 0 px-to-rem(24px);
 }
 
 .slider-arrow {

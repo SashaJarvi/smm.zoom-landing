@@ -69,4 +69,18 @@ $(function() {
   })
 });
 
+// smooth scroll to anchors
+const anchors = document.querySelectorAll('.header__nav-link');
 
+for (const anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const goTo = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body';
+
+    document.querySelector(goTo).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}

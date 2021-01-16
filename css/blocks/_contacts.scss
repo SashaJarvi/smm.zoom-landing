@@ -6,6 +6,14 @@
 
   overflow: hidden;
 
+  @media screen and (max-width: 1200px) {
+    padding: px-to-rem(56px) 0 px-to-rem(147px);
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 20px 0 25px;
+  }
+
   &::before, &::after {
     content: "";
     position: absolute;
@@ -14,16 +22,31 @@
     height: px-to-rem(251px);
 
     background: url("../images/heart.svg") no-repeat center;
+    background-size: 100% 100%;
+
+    @media screen and (max-width: 1200px) {
+      width: px-to-rem(137px);
+      height: px-to-rem(137px);
+    }
   }
 
   &::before {
     top: 0;
     left: px-to-rem(-86px);
+
+    @media screen and (max-width: 1200px) {
+      left: px-to-rem(-55px);
+    }
   }
 
   &::after {
-    top: px-to-rem(103px);
-    right: px-to-rem( -55px);
+    right: px-to-rem(-55px);
+    bottom: px-to-rem(4px);
+
+    @media screen and (max-width: 1200px) {
+      right: px-to-rem(-33px);
+      bottom: px-to-rem(2px);
+    }
   }
 
   &__title {
@@ -34,6 +57,18 @@
     font-family: "Montserrat Bold", sans-serif;
     font-size: px-to-rem(30px);
     line-height: 1.2;
+
+    @media screen and (max-width: 720px) {
+      margin-bottom: px-to-rem(34px);
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: px-to-rem(22px);
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: px-to-rem(16px);
+    }
 
     &::after {
       content: "";
@@ -54,14 +89,32 @@
   &__items {
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
   }
 
   &__group {
     display: flex;
     flex-direction: column-reverse;
 
+    @media screen and (max-width: 720px) {
+      margin-bottom: px-to-rem(22px);
+    }
+
+    &:last-child {
+      @media screen and (max-width: 720px) {
+        margin-bottom: px-to-rem(0px);
+      }
+    }
+
     & + .contacts__group {
       margin-left: px-to-rem(20px);
+
+      @media screen and (max-width: 720px) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -73,15 +126,35 @@
     font-family: "Caveat Bold", sans-serif;
     font-size: px-to-rem(30px);
     line-height: 0.8;
+
+    @media screen and (max-width: 720px) {
+      margin-top: px-to-rem(10px);
+    }
   }
 
   &__group-item {
+    width: px-to-rem(46px);
+    height: px-to-rem(46px);
+
+    @media screen and (max-width: 414px) {
+      width: px-to-rem(38px);
+      height: px-to-rem(38px);
+    }
+
     & + .contacts__group-item {
       margin-left: px-to-rem(55px);
+
+      @media screen and (max-width: 414px) {
+        margin-left: px-to-rem(42px);
+      }
+
+      @media screen and (max-width: 340px) {
+        margin-left: px-to-rem(34px);
+      }
     }
 
     svg feFlood {
-      transition: flood-color .2s ;
+      transition: flood-color .2s;
     }
 
     &:hover, &:focus {
