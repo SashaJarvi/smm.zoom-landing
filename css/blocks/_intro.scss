@@ -1,0 +1,69 @@
+.intro {
+  padding: px-to-rem(44px) 0 px-to-rem(99px);
+
+  text-align: center;
+  background: url("../images/intro-bg.jpg") no-repeat center px-to-rem(-44px);
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__img {
+    max-width: 100%;
+    margin-bottom: px-to-rem(30px);
+  }
+
+  &__title {
+    max-width: px-to-rem(824px);
+    margin: 0 auto px-to-rem(36px);
+
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: px-to-rem(40px);
+  }
+
+  &__description {
+    position: relative;
+    max-width: px-to-rem(600px);
+    margin: 0 auto px-to-rem(36px);
+
+    font-size: px-to-rem(20px);
+    line-height: 1.75;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: px-to-rem(-77px);
+      top: 50%;
+
+      width: px-to-rem(62px);
+      height: px-to-rem(57px);
+
+      background: url("../images/rise-icon.png") no-repeat center;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: px-to-rem(304px);
+    height: px-to-rem(48px);
+
+    color: #fff;
+
+    font-family: "Montserrat Medium", sans-serif;
+    line-height: 1.5;
+
+    border: none;
+    border-radius: px-to-rem(24px);
+    background-image: linear-gradient(90deg, rgba(134,172,164,1) 0%, rgba(150,193,185,1) 30%, rgba(165,214,205,1) 100%);
+    box-shadow: inset 0 4px 8.46px 0.54px rgba(194, 240, 231, 0.68);
+
+    outline: none;
+
+    transition: all .3s;
+
+    &:hover, &:focus {
+      background-image: linear-gradient(90deg, rgba(134,172,164,1) 0%, rgba(134,172,164,1) 100%);
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@mixin zoom-text-bg {
+  &::before, &::after {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &::before {
+    content: url("../images/zoom-text-left.png");
+    left: px-to-rem(-40px);
+
+    @media screen and (max-width: 1280px) {
+      left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      content: url("../images/zoom-text-left-small.png");
+      left: px-to-rem(-15px);
+    }
+  }
+
+  &::after {
+    content: url("../images/zoom-text-right.png");
+    right: px-to-rem(-40px);
+
+    @media screen and (max-width: 1280px) {
+      right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      content: url("../images/zoom-text-right-small.png");
+      right: px-to-rem(-15px);
+    }
+  }
+}
+
+@mixin curly-header {
+  position: relative;
+
+  color: #fff;
+  font-family: "Montserrat Black", sans-serif;
+  font-size: px-to-rem(72px);
+  text-transform: uppercase;
+  line-height: 0.764;
+
+  @media screen and (max-width: 600px) {
+    font-size: px-to-rem(50px);
+  }
+}
