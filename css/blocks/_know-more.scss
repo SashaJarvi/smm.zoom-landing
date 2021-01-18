@@ -9,6 +9,12 @@
 
   z-index: 1;
 
+  @media screen and (max-width: 768px) {
+    padding: px-to-rem(27px) 0;
+
+    background-position-x: 81%;
+  }
+
   &::before, &::after {
     content: "";
     position: absolute;
@@ -20,21 +26,25 @@
     background: #fff;
 
     z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      height: px-to-rem(27px);
+    }
   }
 
   &::before {
-    top: -1px;
+    top: 0;
   }
 
   &::after {
-    bottom: -1px;
+    bottom: 0;
   }
 
   &__form {
     position: relative;
     padding: px-to-rem(42px) px-to-rem(56px) px-to-rem(46px);
     margin: px-to-rem(-34px) px-to-rem(0px);
-    width: px-to-rem(418px);
+    max-width: px-to-rem(418px);
 
     color: #f5fbfb;
 
@@ -42,16 +52,33 @@
 
     z-index: 3;
 
+    @media screen and (max-width: 768px) {
+      margin: px-to-rem(-27px) auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-left: px-to-rem(28px);
+      padding-right: px-to-rem(28px);
+    }
+
+    @media screen and (max-width: 360px) {
+      padding-left: px-to-rem(26px);
+      padding-right: px-to-rem(26px);
+    }
+
     .form__title {
       display: inline-block;
       max-width: px-to-rem(218px);
       margin-bottom: px-to-rem(8px);
 
-
       font-family: "Montserrat SemiBold", sans-serif;
       font-size: px-to-rem(24px);
       line-height: 1.5;
       text-transform: uppercase;
+
+      @media screen and (max-width: 600px) {
+        font-size: px-to-rem(20px);
+      }
     }
 
     .form__subtitle {
@@ -60,10 +87,24 @@
       font-family: "Montserrat Medium", sans-serif;
       font-size: px-to-rem(18px);
       line-height: 1.333;
+
+      @media screen and (max-width: 600px) {
+        max-width: 80%;
+
+        font-size: px-to-rem(16px);
+      }
+
+      @media screen and (max-width: 360px) {
+        max-width: 100%;
+      }
     }
 
     .form__form-group {
       margin-bottom: px-to-rem(24px);
+
+      @media screen and (max-width: 600px) {
+        margin-bottom: px-to-rem(16px);
+      }
     }
 
     .form__input, .form__btn {
@@ -75,6 +116,16 @@
 
       border: none;
       border-radius: px-to-rem(23.5px);
+
+      @media screen and (max-width: 600px) {
+        padding: px-to-rem(8px) px-to-rem(20px);
+
+        font-size: px-to-rem(16px);
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: px-to-rem(14px);
+      }
     }
 
     .form__input {
@@ -100,10 +151,14 @@
 
       cursor: pointer;
 
+      @media screen and (max-width: 600px) {
+        padding-left: px-to-rem(16px);
+      }
+
       &__real {
         position: absolute;
-        width: 1px;
-        height: 1px;
+        width: px-to-rem(1px);
+        height: px-to-rem(1px);
         opacity: 0;
         appearance: none;
 
@@ -115,8 +170,8 @@
       &__fake {
         position: relative;
         display: inline-block;
-        flex: 0 0 20px;
-        height: 20px;
+        flex: 0 0 px-to-rem(20px);
+        height: px-to-rem(20px);
         margin-right: px-to-rem(20px);
 
         vertical-align: bottom;
@@ -142,6 +197,11 @@
 
       &__title {
         line-height: px-to-rem(18px);
+
+        @media screen and (max-width: 600px) {
+          font-size: px-to-rem(14px);
+          line-height: px-to-rem(15px);
+        }
       }
     }
 

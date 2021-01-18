@@ -15,6 +15,14 @@
     font-family: "Montserrat Bold", sans-serif;
     font-size: px-to-rem(30px);
 
+    @media screen and (max-width: 600px) {
+      font-size: px-to-rem(22px);
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: px-to-rem(16px);
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -38,15 +46,39 @@
     flex-wrap: wrap;
 
     padding: 0 px-to-rem(100px);
+
+    @media screen and (max-width: 1200px) {
+      padding: 0 px-to-rem(41px);
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 px-to-rem(22px);
+    }
   }
 
   &__member {
     flex: 1 1 25%;
-    margin-bottom: px-to-rem(56px);
+    margin-bottom: px-to-rem(68px);
 
     text-align: center;
 
     transition: opacity .2s ease-in-out;
+
+    @media screen and (max-width: 962px) {
+      flex-basis: 33%;
+      margin-bottom: px-to-rem(42px);
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-basis: 50%;
+      margin-bottom: px-to-rem(16px);
+    }
+
+    &:first-child, &:last-child {
+      @media screen and (max-width: 768px) {
+        flex-basis: 100%;
+      }
+    }
 
     &:hover {
       opacity: 0.9;
@@ -58,6 +90,17 @@
     margin-bottom: px-to-rem(22px);
 
     border-radius: 50%;
+
+    @media screen and (max-width: 768px) {
+      max-width: px-to-rem(148px);
+      height: auto;
+      margin-bottom: px-to-rem(16px);
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: px-to-rem(107px);
+      margin-bottom: px-to-rem(12px);
+    }
   }
 
   &__member-name {
@@ -65,10 +108,20 @@
 
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: px-to-rem(18px);
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: px-to-rem(4px);
+
+      font-size: px-to-rem(16px);
+    }
   }
 
   &__member-position {
     font-family: "Montserrat Medium", sans-serif;
     font-size: px-to-rem(15px);
+
+    @media screen and (max-width: 600px) {
+      font-size: px-to-rem(13px);
+    }
   }
 }

@@ -11,7 +11,11 @@
   }
 
   @media screen and (max-width: 720px) {
-    padding: 20px 0 25px;
+    padding: px-to-rem(20px) 0 px-to-rem(25px);
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-top: px-to-rem(42px);
   }
 
   &::before, &::after {
@@ -35,7 +39,16 @@
     left: px-to-rem(-86px);
 
     @media screen and (max-width: 1200px) {
+      top: px-to-rem(37px);
       left: px-to-rem(-55px);
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: px-to-rem(37px);
     }
   }
 
@@ -44,7 +57,7 @@
     bottom: px-to-rem(4px);
 
     @media screen and (max-width: 1200px) {
-      right: px-to-rem(-33px);
+      right: px-to-rem(-36px);
       bottom: px-to-rem(2px);
     }
   }
@@ -77,7 +90,7 @@
       left: 50%;
       bottom: px-to-rem(-10px);
 
-      height: 2px;
+      height: px-to-rem(2px);
       width: 62%;
 
       background-color: #2d2b2b;

@@ -35,8 +35,8 @@
     &::after {
       content: url("../images/examples-curl.png");
       position: absolute;
-      top: -105px;
-      left: -166px;
+      top: px-to-rem(-105px);
+      left: px-to-rem(-166px);
 
       z-index: 2;
     }

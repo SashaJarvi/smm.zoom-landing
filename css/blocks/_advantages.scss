@@ -1,11 +1,11 @@
 .advantages {
-  padding-top: 24px;
+  padding-top: px-to-rem(24px);
 
   text-align: center;
 
   &__inner-top {
     position: relative;
-    margin-bottom: 54px;
+    margin-bottom: px-to-rem(54px);
 
     @include zoom-text-bg;
   }
@@ -14,17 +14,17 @@
     position: relative;
 
     display: inline-block;
-    margin-bottom: 45px;
+    margin-bottom: px-to-rem(45px);
 
     font-family: "Montserrat Bold", sans-serif;
-    font-size: 30px;
+    font-size: px-to-rem(30px);
 
     &::after {
       content: "";
       position: absolute;
       left: 50%;
 
-      height: 2px;
+      height: px-to-rem(2px);
       width: 69%;
 
       background-color: #2d2b2b;
@@ -33,11 +33,11 @@
     }
 
     &--top::after {
-      bottom: -10px;
+      bottom: px-to-rem(-10px);
     }
 
     &--bottom::after {
-      top: -14px;
+      top: px-to-rem(-14px);
     }
   }
 
@@ -48,7 +48,7 @@
   }
 
   &__instagram-img {
-    margin-right: 96px;
+    margin-right: px-to-rem(96px);
     max-width: 100%;
   }
 
@@ -56,20 +56,20 @@
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
-    column-gap: 100px;
+    row-gap: px-to-rem(10px);
+    column-gap: px-to-rem(100px);
   }
 
   &__instagram-item {
     &:first-child {
       .inst-advantage__img {
-        left: 36px;
+        left: px-to-rem(36px);
       }
     }
 
     &:last-child {
       .inst-advantage__img {
-        left: 56px;
+        left: px-to-rem(56px);
       }
     }
   }
@@ -90,13 +90,13 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 0 32px;
+    padding: 0 px-to-rem(32px);
   }
 }
 
 .inst-advantage {
-  max-width: 216px;
-  max-height: 170px;
+  max-width: px-to-rem(216px);
+  max-height: px-to-rem(170px);
 
   &__top {
     position: relative;
@@ -108,34 +108,34 @@
     color: rgba(134, 172, 165, .5);
 
     font-family: "Montserrat Bold", sans-serif;
-    font-size: 150px;
+    font-size: px-to-rem(150px);
     line-height: 1;
   }
 
   &__img {
     position: absolute;
     top: 50%;
-    left: 62px;
+    left: px-to-rem(62px);
 
     transform: translateY(-50%);
   }
 
   &__text {
     font-family: "Montserrat Medium", sans-serif;
-    font-size: 15px;
+    font-size: px-to-rem(15px);
   }
 }
 
 .why-item {
   position: relative;
-  width: 200px;
+  width: px-to-rem(200px);
   //height: 135px;
 
   text-align: left;
 
   &:nth-of-type(2),
   &:nth-of-type(3) {
-    margin-top: 94px;
+    margin-top: px-to-rem(94px);
   }
 
   &.why-item--right {
@@ -156,9 +156,9 @@
   }
 
   &__text {
-    padding-top: 80px;
+    padding-top: px-to-rem(80px);
 
-    font-size: 15px;
+    font-size: px-to-rem(15px);
     font-family: "Montserrat Medium", sans-serif;
   }
 
