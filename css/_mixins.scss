@@ -42,4 +42,8 @@
   font-size: px-to-rem(72px);
   text-transform: uppercase;
   line-height: 0.764;
+
+  @media screen and (max-width: 600px) {
+    font-size: px-to-rem(50px);
+  }
 }

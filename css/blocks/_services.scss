@@ -1,10 +1,10 @@
 .services {
-  padding-bottom: px-to-rem(100px);
+  padding: px-to-rem(60px) 0 px-to-rem(100px);
 
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    padding-bottom: px-to-rem(60px);
+    padding: px-to-rem(22px) 0 px-to-rem(60px);
   }
 
   &__inner {
@@ -73,6 +73,7 @@
     }
 
     @media screen and (max-width: 768px) {
+      justify-content: center;
       padding: 0 px-to-rem(45px);
     }
 
@@ -105,7 +106,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      flex-basis: 100%;
+      flex-basis: 80%;
       margin-bottom: px-to-rem(32px);
     }
 
@@ -114,6 +115,7 @@
     }
 
     @media screen and (max-width: 414px) {
+      flex-basis: 100%;
       min-height: px-to-rem(140px);
     }
   }
@@ -138,6 +140,8 @@
     transform: translate(-50%, 0);
 
     @media screen and (max-width: 600px) {
+      top: px-to-rem(-22px);
+
       width: px-to-rem(44px);
       height: px-to-rem(44px);
     }
@@ -146,6 +150,13 @@
   &__item-img {
     max-width: 100%;
     height: auto;
+
+    @media screen and (max-width: 600px) {
+      max-width: px-to-rem(30px);
+      max-height: px-to-rem(30px);
+
+      object-fit: contain;
+    }
   }
 
   &__item-text {
@@ -159,12 +170,12 @@
     line-height: 1;
 
     @media screen and (max-width: 600px) {
-      align-items: baseline;
-
       font-size: px-to-rem(18px);
     }
 
     @media screen and (max-width: 414px) {
+      align-items: baseline;
+
       font-size: px-to-rem(16px);
     }
   }
