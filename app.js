@@ -84,3 +84,14 @@ for (const anchor of anchors) {
     })
   })
 }
+
+// remove .why-item--right class on 962px screen width
+const width = 962,
+  whyItems = document.querySelectorAll('.why-item'),
+  rightClass = 'why-item--right'
+
+for (const item of whyItems) {
+  if (item.classList.contains(rightClass) && screen.width <= width) {
+    item.classList.remove(rightClass);
+  }
+}

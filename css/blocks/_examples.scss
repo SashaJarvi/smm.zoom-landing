@@ -6,6 +6,10 @@
   background-size: cover;
   background-attachment: fixed;
 
+  @media screen and (max-width: 1024px) {
+    background-attachment: scroll;
+  }
+
   &::before {
     content: "";
     position: absolute;

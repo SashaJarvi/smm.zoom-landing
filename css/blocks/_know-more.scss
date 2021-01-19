@@ -9,6 +9,10 @@
 
   z-index: 1;
 
+  @media screen and (max-width: 1024px) {
+    background-attachment: scroll;
+  }
+
   @media screen and (max-width: 768px) {
     padding: px-to-rem(27px) 0;
 
