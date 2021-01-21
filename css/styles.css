@@ -1052,9 +1052,19 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+@media screen and (max-width: 1200px) {
+  .examples {
+    padding-top: 7.125rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .examples {
     background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 600px) {
+  .examples {
+    padding: 4.1875rem 0 3.875rem;
   }
 }
 .examples::before {
@@ -1064,12 +1074,22 @@ body {
   width: 68%;
   height: 100%;
   background: url("../images/examples-bg-2.png") no-repeat center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .examples__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .examples__inner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .examples__inner {
+    align-items: baseline;
+  }
 }
 .examples__title {
   max-width: 27rem;
@@ -1087,6 +1107,23 @@ body {
     font-size: 3.125rem;
   }
 }
+@media screen and (max-width: 1200px) {
+  .examples__title {
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .examples__title {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .examples__title {
+    max-width: 12.75rem;
+    margin-bottom: 1.875rem;
+    font-size: 2.1875rem;
+  }
+}
 .examples__title::after {
   content: url("../images/examples-curl.png");
   position: absolute;
@@ -1094,38 +1131,112 @@ body {
   left: -10.375rem;
   z-index: 2;
 }
+@media screen and (max-width: 600px) {
+  .examples__title::after {
+    content: url("../images/figures/examples-curl-small.png");
+    top: -2.4375rem;
+    left: -1.5625rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .examples__title::after {
+    display: none;
+  }
+}
 .examples__title-word {
   display: inline-block;
   transform: translateX(1.125rem);
 }
-.examples__images {
-  display: flex;
-  justify-content: center;
-  width: 27.0625rem;
+@media screen and (max-width: 600px) {
+  .examples__title-word {
+    transform: none;
+  }
 }
-.examples__slider {
-  display: flex;
-  width: 18.1875rem;
+.examples__slider.swiper-container {
+  width: 31.25rem;
   height: 36.4375rem;
-  margin: 0 auto;
-  background: url("https://i.postimg.cc/BZgcjsmX/examples-img-wrapper.png") no-repeat center;
 }
-.examples__slider-item {
-  display: flex !important;
-  height: 36.4375rem;
+@media screen and (max-width: 600px) {
+  .examples__slider.swiper-container {
+    width: 20.625rem;
+    height: 29.0625rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .examples__slider.swiper-container {
+    width: 100%;
+  }
+}
+.examples__slider .swiper-slide {
+  display: flex;
   align-items: center;
   justify-content: center;
+  background: url("../images/examples-img-wrapper.png") no-repeat center;
 }
-.examples__slider-img {
+@media screen and (max-width: 600px) {
+  .examples__slider .swiper-slide {
+    background-size: 14.5625rem 100%;
+  }
+}
+.examples__slider .swiper-image {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
-.examples .slider-arrow__prev {
-  left: -4.25rem;
+@media screen and (max-width: 600px) {
+  .examples__slider .swiper-image {
+    max-width: 12.75rem;
+    height: 27.6875rem;
+  }
 }
-.examples .slider-arrow__next {
-  right: -4.25rem;
+.examples__slider .swiper-button-prev,
+.examples__slider .swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background: #aad1cb;
+  border-radius: 50%;
+}
+.examples__slider .swiper-button-prev.swiper-button-disabled path,
+.examples__slider .swiper-button-next.swiper-button-disabled path {
+  fill: #919b99;
+}
+.examples__slider .swiper-button-prev::after,
+.examples__slider .swiper-button-next::after {
+  display: none;
+}
+.examples__slider .swiper-button-prev {
+  left: 2.625rem;
+  transform: rotate(-180deg);
+}
+@media screen and (max-width: 600px) {
+  .examples__slider .swiper-button-prev {
+    left: 0;
+  }
+}
+@media screen and (max-width: 359px) {
+  .examples__slider .swiper-button-prev {
+    display: none;
+  }
+}
+.examples__slider .swiper-button-next {
+  right: 2.625rem;
+}
+@media screen and (max-width: 600px) {
+  .examples__slider .swiper-button-next {
+    right: 0;
+  }
+}
+@media screen and (max-width: 359px) {
+  .examples__slider .swiper-button-next {
+    display: none;
+  }
+}
+.examples__slider .swiper-button-icon {
+  width: 1.8125rem;
+  height: 1.8125rem;
 }
 
 .visual {

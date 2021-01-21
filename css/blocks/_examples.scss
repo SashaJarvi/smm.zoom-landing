@@ -6,8 +6,16 @@
   background-size: cover;
   background-attachment: fixed;
 
+  @media screen and (max-width: 1200px) {
+    padding-top: px-to-rem(114px);
+  }
+
   @media screen and (max-width: 1024px) {
     background-attachment: scroll;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: px-to-rem(67px) 0 px-to-rem(62px);
   }
 
   &::before {
@@ -19,13 +27,21 @@
     height: 100%;
 
     background: url("../images/examples-bg-2.png") no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 600px) {
+      align-items: baseline;
+    }
   }
 
   &__title {
@@ -36,6 +52,21 @@
 
     text-align: right;
 
+    @media screen and (max-width: 1200px) {
+      margin-bottom: px-to-rem(60px);
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: px-to-rem(204px);
+      margin-bottom: px-to-rem(30px);
+
+      font-size: px-to-rem(35px);
+    }
+
     &::after {
       content: url("../images/examples-curl.png");
       position: absolute;
@@ -43,6 +74,16 @@
       left: px-to-rem(-166px);
 
       z-index: 2;
+
+      @media screen and (max-width: 600px) {
+        content: url("../images/figures/examples-curl-small.png");
+        top: px-to-rem(-39px);
+        left: px-to-rem(-25px);
+      }
+
+      @media screen and (max-width: 359px) {
+        display: none;
+      }
     }
   }
 
@@ -50,46 +91,102 @@
     display: inline-block;
 
     transform: translateX(px-to-rem(18px));
-  }
 
-  &__images {
-    display: flex;
-    justify-content: center;
-
-    width: px-to-rem(433px);
+    @media screen and (max-width: 600px) {
+      transform: none;
+    }
   }
 
   &__slider {
-    display: flex;
-    width: px-to-rem(291px);
-    height: px-to-rem(583px);
+    &.swiper-container {
+      width: px-to-rem(500px);
+      height: px-to-rem(583px);
 
-    margin: 0 auto;
+      @media screen and (max-width: 600px) {
+        width: px-to-rem(330px);
+        height: px-to-rem(465px);
+      }
 
-    background: url("https://i.postimg.cc/BZgcjsmX/examples-img-wrapper.png") no-repeat center;
-  }
-
-  &__slider-item {
-    display: flex !important;
-    height: px-to-rem(583px);
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__slider-img {
-    max-width: 100%;
-    height: auto;
-
-    object-fit: cover;
-  }
-
-  .slider-arrow {
-    &__prev {
-      left: px-to-rem(-68px);
+      @media screen and (max-width: 414px) {
+        width: 100%
+      }
     }
 
-    &__next {
-      right: px-to-rem(-68px);
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: url("../images/examples-img-wrapper.png") no-repeat center;
+
+      @media screen and (max-width: 600px) {
+        background-size: px-to-rem(233px) 100%;
+      }
+    }
+
+    .swiper-image {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @media screen and (max-width: 600px) {
+        max-width: px-to-rem(204px);
+        height: px-to-rem(443px);
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: px-to-rem(35px);
+      height: px-to-rem(35px);
+
+      background: #aad1cb;
+      border-radius: 50%;
+
+      &.swiper-button-disabled {
+        path {
+          fill: #919b99;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: px-to-rem(42px);
+
+      transform: rotate(-180deg);
+
+      @media screen and (max-width: 600px) {
+        left: 0
+      }
+
+      @media screen and (max-width: 359px) {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      right: px-to-rem(42px);
+
+      @media screen and (max-width: 600px) {
+        right: 0
+      }
+
+      @media screen and (max-width: 359px) {
+        display: none;
+      }
+    }
+
+    .swiper-button-icon {
+      width: px-to-rem(29px);
+      height: px-to-rem(29px);
     }
   }
 }

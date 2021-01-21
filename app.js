@@ -15,18 +15,20 @@ for (const anchor of anchors) {
 }
 
 // remove .why-item--right class on 962px screen width
-const width = 962,
+const tabletWidth = 962,
   whyItems = document.querySelectorAll('.why-item'),
   rightClass = 'why-item--right'
 
 for (const item of whyItems) {
-  if (item.classList.contains(rightClass) && screen.width <= width) {
+  if (item.classList.contains(rightClass) && screen.width <= tabletWidth) {
     item.classList.remove(rightClass);
   }
 }
 
 // sliders
-
-// const examplesSwiper = new Swiper('.swiper-container', {
-//
-// })
+const examplesSwiper = new Swiper('.examples__slider.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
