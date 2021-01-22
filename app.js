@@ -32,3 +32,10 @@ const examplesSwiper = new Swiper('.examples__slider.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 })
+
+const visualSwiper = new Swiper('.visual__slider.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})

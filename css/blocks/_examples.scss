@@ -77,12 +77,13 @@
 
       @media screen and (max-width: 600px) {
         content: url("../images/figures/examples-curl-small.png");
-        top: px-to-rem(-39px);
+        top: px-to-rem(-38px);
         left: px-to-rem(-25px);
-      }
 
-      @media screen and (max-width: 359px) {
-        display: none;
+        width: px-to-rem(360px);
+        height: px-to-rem(110px);
+
+        overflow: hidden;
       }
     }
   }
@@ -133,60 +134,6 @@
         max-width: px-to-rem(204px);
         height: px-to-rem(443px);
       }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: px-to-rem(35px);
-      height: px-to-rem(35px);
-
-      background: #aad1cb;
-      border-radius: 50%;
-
-      &.swiper-button-disabled {
-        path {
-          fill: #919b99;
-        }
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      left: px-to-rem(42px);
-
-      transform: rotate(-180deg);
-
-      @media screen and (max-width: 600px) {
-        left: 0
-      }
-
-      @media screen and (max-width: 359px) {
-        display: none;
-      }
-    }
-
-    .swiper-button-next {
-      right: px-to-rem(42px);
-
-      @media screen and (max-width: 600px) {
-        right: 0
-      }
-
-      @media screen and (max-width: 359px) {
-        display: none;
-      }
-    }
-
-    .swiper-button-icon {
-      width: px-to-rem(29px);
-      height: px-to-rem(29px);
     }
   }
 }
