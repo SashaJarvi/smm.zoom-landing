@@ -111,7 +111,7 @@
     }
 
     @media screen and (max-width: 600px) {
-      padding: px-to-rem(32px) px-to-rem(22px) px-to-rem(12px);
+      padding: px-to-rem(32px) px-to-rem(16px) px-to-rem(14px);
     }
 
     @media screen and (max-width: 414px) {
@@ -170,13 +170,13 @@
     line-height: 1;
 
     @media screen and (max-width: 600px) {
-      font-size: px-to-rem(18px);
+      font-size: px-to-rem(16px);
     }
 
     @media screen and (max-width: 414px) {
       align-items: baseline;
 
-      font-size: px-to-rem(16px);
+      font-size: px-to-rem(14px);
     }
   }
 
@@ -185,11 +185,11 @@
     font-size: px-to-rem(36px);
 
     @media screen and (max-width: 600px) {
-      font-size: px-to-rem(32px);
+      font-size: px-to-rem(30px);
     }
 
     @media screen and (max-width: 414px) {
-      font-size: px-to-rem(26px);
+      font-size: px-to-rem(24px);
     }
   }
 

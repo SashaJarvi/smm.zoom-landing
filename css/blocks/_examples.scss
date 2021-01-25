@@ -77,11 +77,15 @@
 
       @media screen and (max-width: 600px) {
         content: url("../images/figures/examples-curl-small.png");
-        top: px-to-rem(-38px);
+        top: px-to-rem(-39px);
         left: px-to-rem(-25px);
 
         width: px-to-rem(360px);
         height: px-to-rem(110px);
+      }
+
+      @media screen and (max-width: 360px) {
+        width: px-to-rem(320px);
 
         overflow: hidden;
       }
