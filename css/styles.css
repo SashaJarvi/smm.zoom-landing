@@ -163,6 +163,10 @@ body {
   background: #aad1cb;
   border-radius: 50%;
 }
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: none;
+}
 .swiper-button-prev.swiper-button-disabled path,
 .swiper-button-next.swiper-button-disabled path {
   fill: #919b99;
@@ -245,6 +249,9 @@ body {
   .header__nav {
     overflow-x: scroll;
     overflow-y: hidden;
+  }
+  .header__nav::-webkit-scrollbar {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
@@ -415,6 +422,11 @@ body {
 .advantages {
   padding: 1.5rem 0 2.375rem;
   text-align: center;
+}
+@media screen and (max-width: 414px) {
+  .advantages {
+    padding-top: 2.375rem;
+  }
 }
 .advantages__inner {
   position: relative;

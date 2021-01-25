@@ -3,6 +3,10 @@
 
   text-align: center;
 
+  @media screen and (max-width: 414px) {
+    padding-top: px-to-rem(38px);
+  }
+
   &__inner {
     position: relative;
     padding: 0 px-to-rem(91px);

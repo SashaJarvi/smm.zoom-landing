@@ -38,6 +38,10 @@
     @media screen and (max-width: 1200px) {
       overflow-x: scroll;
       overflow-y: hidden;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     @media screen and (max-width: 600px) {
