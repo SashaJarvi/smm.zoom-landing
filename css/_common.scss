@@ -55,6 +55,10 @@ body {
   background: #aad1cb;
   border-radius: 50%;
 
+  &:focus {
+    outline: none;
+  }
+
   &.swiper-button-disabled {
     path {
       fill: #919b99;
