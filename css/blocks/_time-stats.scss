@@ -6,6 +6,10 @@
   background-size: cover;
   background-attachment: fixed;
 
+  @media screen and (max-width: 1024px) {
+    background-attachment: scroll;
+  }
+
   @media screen and (max-width: 768px) {
     padding: px-to-rem(64px) 0;
   }
@@ -64,6 +68,7 @@
 
     @media screen and (max-width: 1200px) {
       flex-direction: column;
+      padding: px-to-rem(55px) 0;
     }
 
     @media screen and (max-width: 768px) {

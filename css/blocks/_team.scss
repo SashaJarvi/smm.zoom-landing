@@ -33,7 +33,7 @@
       height: px-to-rem(2px);
       width: 84%;
 
-      background-color: #2d2b2b;
+      background-color: $black;
 
       transform: translate(-50%, 0);
     }
@@ -72,11 +72,23 @@
     @media screen and (max-width: 768px) {
       flex-basis: 50%;
       margin-bottom: px-to-rem(16px);
+
+      &:first-child, &:last-child {
+        flex-basis: 100%;
+      }
+
+      &:first-child {
+        .team__member-photo {
+          max-width: px-to-rem(154px);
+        }
+      }
     }
 
-    &:first-child, &:last-child {
-      @media screen and (max-width: 768px) {
-        flex-basis: 100%;
+    @media screen and (max-width: 600px) {
+      &:first-child {
+        .team__member-photo {
+          max-width: px-to-rem(112px);
+        }
       }
     }
 
@@ -110,9 +122,9 @@
     font-size: px-to-rem(18px);
 
     @media screen and (max-width: 600px) {
-      margin-bottom: px-to-rem(4px);
+      margin-bottom: px-to-rem(2px);
 
-      font-size: px-to-rem(16px);
+      font-size: px-to-rem(14px);
     }
   }
 
@@ -121,7 +133,7 @@
     font-size: px-to-rem(15px);
 
     @media screen and (max-width: 600px) {
-      font-size: px-to-rem(13px);
+      font-size: px-to-rem(12px);
     }
   }
 }

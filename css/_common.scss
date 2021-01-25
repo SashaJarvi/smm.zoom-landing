@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
 body {
   min-width: px-to-rem(320px);
 
-  color: #2d2b2b;
+  color: $black;
 
   font-family: "Montserrat Regular", sans-serif;
   font-size: $base-size;
@@ -43,34 +43,56 @@ body {
   padding: 0 px-to-rem(24px) 0 px-to-rem(24px);
 }
 
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-
+.swiper-button-prev,
+.swiper-button-next {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  width: px-to-rem(40px);
-  height: px-to-rem(40px);
+  width: px-to-rem(35px);
+  height: px-to-rem(35px);
 
-  margin-top: 0;
-
-  background-color: #a5d6cd;
-  border: none;
+  background: #aad1cb;
   border-radius: 50%;
 
-  outline: none;
-
-  &.slick-disabled {
-    opacity: 0.7;
-
-    svg path {
-      fill: #8ab1aa;
+  &.swiper-button-disabled {
+    path {
+      fill: #919b99;
     }
   }
 
-  &__prev {
-    transform: rotate(180deg);
+  &::after {
+    display: none;
   }
+}
+
+.swiper-button-prev {
+  left: px-to-rem(42px);
+
+  transform: rotate(-180deg);
+
+  @media screen and (max-width: 600px) {
+    left: 0
+  }
+
+  @media screen and (max-width: 359px) {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  right: px-to-rem(42px);
+
+  @media screen and (max-width: 600px) {
+    right: 0
+  }
+
+  @media screen and (max-width: 359px) {
+    display: none;
+  }
+}
+
+.swiper-button-icon {
+  width: px-to-rem(29px);
+  height: px-to-rem(29px);
 }
