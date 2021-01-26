@@ -39,3 +39,19 @@ const visualSwiper = new Swiper('.visual__slider.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 })
+
+const statsSlider = new Swiper('.stats__slider.swiper-container', {
+  slidesPerView: 1,
+  breakpoints: {
+    1080: {
+      slidesPerView: 3
+    },
+    849: {
+      slidesPerView: 2
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+})

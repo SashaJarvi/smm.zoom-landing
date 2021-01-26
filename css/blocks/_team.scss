@@ -1,5 +1,11 @@
 .team {
+  padding: px-to-rem(18px) 0 0;
+
   text-align: center;
+
+  @media screen and (max-width: 599px) {
+    padding: px-to-rem(24px) 0 0;
+  }
 
   &__inner {
     position: relative;
@@ -15,11 +21,11 @@
     font-family: "Montserrat Bold", sans-serif;
     font-size: px-to-rem(30px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(22px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       font-size: px-to-rem(16px);
     }
 
@@ -47,11 +53,11 @@
 
     padding: 0 px-to-rem(100px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       padding: 0 px-to-rem(41px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       padding: 0 px-to-rem(22px);
     }
   }
@@ -64,12 +70,12 @@
 
     transition: opacity .2s ease-in-out;
 
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       flex-basis: 33%;
       margin-bottom: px-to-rem(42px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       flex-basis: 50%;
       margin-bottom: px-to-rem(16px);
 
@@ -84,7 +90,7 @@
       }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       &:first-child {
         .team__member-photo {
           max-width: px-to-rem(112px);
@@ -103,13 +109,13 @@
 
     border-radius: 50%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       max-width: px-to-rem(148px);
       height: auto;
       margin-bottom: px-to-rem(16px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(107px);
       margin-bottom: px-to-rem(12px);
     }
@@ -121,7 +127,7 @@
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: px-to-rem(18px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       margin-bottom: px-to-rem(2px);
 
       font-size: px-to-rem(14px);
@@ -132,7 +138,7 @@
     font-family: "Montserrat Medium", sans-serif;
     font-size: px-to-rem(15px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(12px);
     }
   }

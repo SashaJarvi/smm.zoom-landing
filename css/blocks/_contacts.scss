@@ -6,15 +6,15 @@
 
   overflow: hidden;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding: px-to-rem(56px) 0 px-to-rem(147px);
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 719px) {
     padding: px-to-rem(20px) 0 px-to-rem(25px);
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     padding-top: px-to-rem(42px);
   }
 
@@ -28,7 +28,7 @@
     background: url("../images/figures/heart.svg") no-repeat center;
     background-size: 100% 100%;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       width: px-to-rem(137px);
       height: px-to-rem(137px);
     }
@@ -38,16 +38,16 @@
     top: 0;
     left: px-to-rem(-86px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       top: px-to-rem(37px);
       left: px-to-rem(-55px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       top: 0;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       top: px-to-rem(37px);
     }
   }
@@ -56,7 +56,7 @@
     right: px-to-rem(-55px);
     bottom: px-to-rem(4px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       right: px-to-rem(-36px);
       bottom: px-to-rem(2px);
     }
@@ -71,15 +71,15 @@
     font-size: px-to-rem(30px);
     line-height: 1.2;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 719px) {
       margin-bottom: px-to-rem(34px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(22px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       font-size: px-to-rem(16px);
     }
 
@@ -103,7 +103,7 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 719px) {
       flex-direction: column;
     }
   }
@@ -112,12 +112,12 @@
     display: flex;
     flex-direction: column-reverse;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 719px) {
       margin-bottom: px-to-rem(22px);
     }
 
     &:last-child {
-      @media screen and (max-width: 720px) {
+      @media screen and (max-width: 719px) {
         margin-bottom: px-to-rem(0px);
       }
     }
@@ -125,7 +125,7 @@
     & + .contacts__group {
       margin-left: px-to-rem(20px);
 
-      @media screen and (max-width: 720px) {
+      @media screen and (max-width: 719px) {
         margin-left: 0;
       }
     }
@@ -134,13 +134,13 @@
   &__group-title {
     margin-top: px-to-rem(22px);
 
-    color: #86aca4;
+    color: $light-green;
 
     font-family: "Caveat Bold", sans-serif;
     font-size: px-to-rem(30px);
     line-height: 0.8;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 719px) {
       margin-top: px-to-rem(10px);
     }
   }
@@ -149,7 +149,7 @@
     width: px-to-rem(46px);
     height: px-to-rem(46px);
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       width: px-to-rem(38px);
       height: px-to-rem(38px);
     }
@@ -157,11 +157,11 @@
     & + .contacts__group-item {
       margin-left: px-to-rem(55px);
 
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: 413px) {
         margin-left: px-to-rem(42px);
       }
 
-      @media screen and (max-width: 340px) {
+      @media screen and (max-width: 339px) {
         margin-left: px-to-rem(34px);
       }
     }

@@ -1,16 +1,15 @@
 .time-stats {
-  //margin: px-to-rem(40px) 0;
   background:
     linear-gradient(rgba(165, 214, 205, .8), rgba(165, 214, 205, .8)),
     url("../images/time-stats-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     background-attachment: scroll;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: px-to-rem(64px) 0;
   }
 
@@ -18,11 +17,11 @@
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       justify-content: space-around;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       flex-direction: column;
     }
   }
@@ -33,24 +32,24 @@
 
     @include curly-header;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-right: 0;
       margin-bottom: px-to-rem(48px);
     }
 
-    @media screen and (max-width: 340px) {
+    @media screen and (max-width: 339px) {
       transform: translateX(-10px);
     }
 
     &::after {
-      content: url("../images/time-stats-curl.png");
+      content: url("../images/figures/time-stats-curl.png");
       position: absolute;
       top: px-to-rem(-40px);
       left: px-to-rem(21px);
 
       z-index: 2;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 599px) {
         content: url("../images/figures/time-stats-curl-small.png");
         top: px-to-rem(-27px);
         left: px-to-rem(14px);
@@ -66,12 +65,12 @@
 
     padding: px-to-rem(105px) 0;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       flex-direction: column;
       padding: px-to-rem(55px) 0;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       padding: 0;
     }
   }
@@ -89,7 +88,7 @@
 
         transform: translate(px-to-rem(10px), px-to-rem(-26px));
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1199px) {
           transform: translate(px-to-rem(-46px), px-to-rem(-26px));
         }
 
@@ -110,7 +109,7 @@
         }
       }
 
-      @media screen and (max-width: 1200px)  {
+      @media screen and (max-width: 1199px)  {
         margin-top: 0;
         transform: translateX(22px);
       }

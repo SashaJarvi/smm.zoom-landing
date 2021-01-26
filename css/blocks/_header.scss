@@ -8,7 +8,7 @@
 
     min-height: px-to-rem(72px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       min-height: px-to-rem(52px);
     }
   }
@@ -18,14 +18,14 @@
     width: px-to-rem(50px);
     height: px-to-rem(50px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(40px);
       height: px-to-rem(40px);
     }
   }
 
   &__logo-img {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(40px);
       height: px-to-rem(40px);
     }
@@ -35,7 +35,7 @@
     flex-grow: 1;
     padding: 0 px-to-rem(24px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       overflow-x: scroll;
       overflow-y: hidden;
 
@@ -44,7 +44,7 @@
       }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       padding: 0 px-to-rem(12px);
     }
   }
@@ -55,22 +55,20 @@
     align-items: center;
     flex: 1;
 
-    padding-right: px-to-rem(46px);
-
-    @media screen and (max-width: 1200px) {
-      width: 770px;
+    @media screen and (max-width: 1079px) {
+      width: px-to-rem(770px);
       padding: 0;
     }
   }
 
   &__nav-item {
     max-width: px-to-rem(100px);
-    padding: 0 10px;
+    padding: 0 px-to-rem(10px);
 
     font-size: px-to-rem(14px);
     text-align: center;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(12px);
     }
   }
@@ -98,7 +96,7 @@
 
     transition: all .3s;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(12px);
     }
 
