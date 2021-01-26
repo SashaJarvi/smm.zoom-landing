@@ -2,24 +2,23 @@
   padding: px-to-rem(44px) 0 px-to-rem(99px);
 
   text-align: center;
-  //background: url("../images/intro-bg.jpg") no-repeat center px-to-rem(-44px);
   background: url("../images/intro-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     background-attachment: scroll;
     background-position-x: 25%;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     padding: px-to-rem(92px) 0 px-to-rem(64px);
   }
 
   &__img-wrapper {
     margin: 0 auto px-to-rem(30px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(168px);
       height: px-to-rem(168px);
     }
@@ -37,14 +36,14 @@
     font-family: "Montserrat Bold", sans-serif;
     font-size: px-to-rem(40px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(400px);
       margin-bottom: px-to-rem(44px);
 
       font-size: px-to-rem(24px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       max-width: px-to-rem(238px);
     }
   }
@@ -57,14 +56,14 @@
     font-size: px-to-rem(20px);
     line-height: 1.75;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(400px);
       margin-bottom: px-to-rem(72px);
 
       font-size: px-to-rem(14px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       max-width: px-to-rem(278px);
     }
 
@@ -81,7 +80,7 @@
 
       transform: translateY(-50%);
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
     }
@@ -106,7 +105,7 @@
 
     transition: all .3s;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(228px);
       height: px-to-rem(40px);
 

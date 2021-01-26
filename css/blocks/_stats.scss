@@ -1,0 +1,121 @@
+.stats {
+  position: relative;
+  padding: px-to-rem(152px) 0 px-to-rem(142px);
+
+  background: url("../images/white-ceramic-mug-on-white-table.jpeg") no-repeat center;
+  background-size: cover;
+
+  @media screen and (max-width: 599px) {
+    padding: px-to-rem(48px) 0 px-to-rem(58px);
+
+    background-position: 75% center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #a5d6cd;
+
+    opacity: 0.8;
+  }
+
+  &__title {
+    @include curly-header;
+    max-width: px-to-rem(538px);
+    margin-bottom: px-to-rem(40px);
+    margin-left: auto;
+
+    text-align: center;
+
+    @media screen and (max-width: 1438px) {
+      margin: 0 auto px-to-rem(48px);
+    }
+
+    @media screen and (max-width: 599px) {
+      max-width: px-to-rem(261px);
+
+      font-size: px-to-rem(35px);
+    }
+
+    &::after {
+      content: url("../images/figures/stats-curl.png");
+      position: absolute;
+      top: px-to-rem(-92px);
+      left: px-to-rem(24px);
+
+      z-index: 2;
+
+      @media screen and (max-width: 847px) {
+        width: px-to-rem(533px);
+
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 599px) {
+        content: url("../images/figures/stats-curl-small.png");
+        top: px-to-rem(-45px);
+        left: px-to-rem(10px);
+
+        width: px-to-rem(299px);
+
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 359px) {
+        width: px-to-rem(280px);
+      }
+    }
+  }
+
+  &__slider {
+    .swiper-container {
+      width: 100%;
+      height: px-to-rem(465px);
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .swiper-img {
+        transform: scale(0.86);
+        transition: all .3s;
+
+        @media screen and (max-width: 1079px) {
+          transform: none;
+        }
+      }
+
+      &.swiper-slide-next {
+        .swiper-img {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .swiper-img {
+      max-width: px-to-rem(320px);
+      height: auto;
+      object-fit: cover;
+
+      @media screen and (max-width: 479px) {
+        max-width: px-to-rem(198px);
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+  }
+}

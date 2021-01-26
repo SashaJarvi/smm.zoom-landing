@@ -9,11 +9,11 @@
     content: url("../images/zoom-text-left.png");
     left: px-to-rem(-40px);
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279px) {
       left: 0;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       content: url("../images/zoom-text-left-small.png");
       left: px-to-rem(-15px);
     }
@@ -23,11 +23,11 @@
     content: url("../images/zoom-text-right.png");
     right: px-to-rem(-40px);
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279px) {
       right: 0;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       content: url("../images/zoom-text-right-small.png");
       right: px-to-rem(-15px);
     }
@@ -43,7 +43,7 @@
   text-transform: uppercase;
   line-height: 0.764;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     font-size: px-to-rem(50px);
   }
 }

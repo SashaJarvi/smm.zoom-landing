@@ -75,7 +75,7 @@ body {
 
   transform: rotate(-180deg);
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     left: 0
   }
 
@@ -87,7 +87,7 @@ body {
 .swiper-button-next {
   right: px-to-rem(42px);
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     right: 0
   }
 

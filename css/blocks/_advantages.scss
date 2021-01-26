@@ -3,8 +3,8 @@
 
   text-align: center;
 
-  @media screen and (max-width: 414px) {
-    padding-top: px-to-rem(38px);
+  @media screen and (max-width: 413px) {
+    padding: px-to-rem(46px) 0;
   }
 
   &__inner {
@@ -13,7 +13,7 @@
 
     @include zoom-text-bg;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       padding: 0 px-to-rem(36px);
 
       &::before {
@@ -39,13 +39,13 @@
     font-family: "Montserrat Bold", sans-serif;
     font-size: px-to-rem(30px);
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       margin-bottom: px-to-rem(25px);
 
       font-size: px-to-rem(20px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       font-size: px-to-rem(16px);
     }
 
@@ -76,7 +76,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       flex-direction: column;
       align-items: center;
     }
@@ -86,15 +86,15 @@
     max-width: 100%;
     height: auto;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       margin-bottom: px-to-rem(42px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       max-width: px-to-rem(307px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(209px);
     }
   }
@@ -106,20 +106,20 @@
     row-gap: px-to-rem(10px);
     column-gap: px-to-rem(100px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       flex-direction: column;
       width: 100%;
     }
   }
 
   &__instagram-item {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: 100%;
     }
 
@@ -127,11 +127,11 @@
       .inst-advantage__img {
         left: px-to-rem(36px);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           left: px-to-rem(30px);
         }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 479px) {
           left: px-to-rem(16px);
         }
       }
@@ -141,11 +141,11 @@
       .inst-advantage__img {
         left: px-to-rem(56px);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           left: px-to-rem(30px);
         }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 479px) {
           left: px-to-rem(16px);
         }
       }
@@ -170,11 +170,11 @@
 
     padding: 0 px-to-rem(32px);
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       padding: 0;
     }
 
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       flex-direction: column;
     }
   }
@@ -183,7 +183,7 @@
 .inst-advantage {
   max-width: px-to-rem(216px);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -191,7 +191,7 @@
     max-width: initial;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     justify-content: space-between;
   }
 
@@ -204,11 +204,11 @@
 
     text-align: left;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: px-to-rem(150px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(70px);
     }
   }
@@ -220,11 +220,11 @@
     font-size: px-to-rem(150px);
     line-height: 1;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       font-size: px-to-rem(112px);
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
       font-size: px-to-rem(76px);
     }
   }
@@ -239,16 +239,16 @@
 
     transform: translateY(-50%);
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       left: px-to-rem(30px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       width: px-to-rem(70px);
       height: px-to-rem(70px);
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
       left: px-to-rem(16px);
 
       width: px-to-rem(49px);
@@ -260,19 +260,19 @@
     font-family: "Montserrat Medium", sans-serif;
     font-size: px-to-rem(15px);
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       max-width: px-to-rem(350px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(240px);
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
       max-width: px-to-rem(220px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       max-width: px-to-rem(175px);
 
       font-size: px-to-rem(12px);
@@ -286,7 +286,7 @@
 
   text-align: left;
 
-  @media screen and (max-width: 962px) {
+  @media screen and (max-width: 961px) {
     width: 100%;
     margin-bottom: px-to-rem(16px);
   }
@@ -295,19 +295,19 @@
   &:nth-of-type(3) {
     margin-top: px-to-rem(94px);
 
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       margin-top: 0;
     }
   }
 
   &:nth-of-type(2) {
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       order: 2;
     }
   }
 
   &:nth-of-type(3) {
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       order: 1;
 
       .why-item__img {
@@ -324,7 +324,7 @@
   }
 
   &:last-child {
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       order: 3;
 
       .why-item__img {
@@ -363,15 +363,15 @@
     font-size: px-to-rem(15px);
     font-family: "Montserrat Medium", sans-serif;
 
-    @media screen and (max-width: 962px) {
+    @media screen and (max-width: 961px) {
       max-width: px-to-rem(400px);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(200px);
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 413px) {
       font-size: px-to-rem(12px);
     }
   }

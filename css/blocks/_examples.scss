@@ -6,15 +6,15 @@
   background-size: cover;
   background-attachment: fixed;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     padding-top: px-to-rem(114px);
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     background-attachment: scroll;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 599px) {
     padding: px-to-rem(67px) 0 px-to-rem(62px);
   }
 
@@ -35,11 +35,11 @@
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       flex-direction: column;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       align-items: baseline;
     }
   }
@@ -52,15 +52,15 @@
 
     text-align: right;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       margin-bottom: px-to-rem(60px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-left: 0;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       max-width: px-to-rem(204px);
       margin-bottom: px-to-rem(30px);
 
@@ -68,23 +68,20 @@
     }
 
     &::after {
-      content: url("../images/examples-curl.png");
+      content: url("../images/figures/examples-curl.png");
       position: absolute;
       top: px-to-rem(-105px);
       left: px-to-rem(-166px);
 
       z-index: 2;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 599px) {
         content: url("../images/figures/examples-curl-small.png");
         top: px-to-rem(-39px);
         left: px-to-rem(-25px);
-
-        width: px-to-rem(360px);
-        height: px-to-rem(110px);
       }
 
-      @media screen and (max-width: 360px) {
+      @media screen and (max-width: 359px) {
         width: px-to-rem(320px);
 
         overflow: hidden;
@@ -97,7 +94,7 @@
 
     transform: translateX(px-to-rem(18px));
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 599px) {
       transform: none;
     }
   }
@@ -107,12 +104,12 @@
       width: px-to-rem(500px);
       height: px-to-rem(583px);
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 599px) {
         width: px-to-rem(330px);
         height: px-to-rem(465px);
       }
 
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: 413px) {
         width: 100%
       }
     }
@@ -124,7 +121,7 @@
 
       background: url("../images/examples-img-wrapper.png") no-repeat center;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 599px) {
         background-size: px-to-rem(233px) 100%;
       }
     }
@@ -134,7 +131,7 @@
       height: auto;
       object-fit: cover;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 599px) {
         max-width: px-to-rem(204px);
         height: px-to-rem(443px);
       }
