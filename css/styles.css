@@ -210,6 +210,13 @@ body {
   height: 1.8125rem;
 }
 
+@media screen and (max-width: 413px) {
+  .toastify {
+    max-width: 18.75rem;
+    font-size: 0.875rem;
+  }
+}
+
 .header {
   background-color: #a3d3ca;
 }
@@ -1884,15 +1891,13 @@ body {
   }
 }
 .know-more__form .form__form-group {
+  position: relative;
   margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 599px) {
   .know-more__form .form__form-group {
     margin-bottom: 1rem;
   }
-}
-.know-more__form .form__form-group--select {
-  position: relative;
 }
 .know-more__form .form__form-group--select::after {
   content: "";
@@ -1942,7 +1947,7 @@ body {
   transition: border 0.2s ease-in-out;
 }
 .know-more__form .form__input:focus, .know-more__form .form__select:focus {
-  border: 1px solid #3e5b55;
+  border: 1px solid #479b8c;
 }
 .know-more__form .form__input::placeholder, .know-more__form .form__select::placeholder {
   color: #86aca4;
@@ -2024,6 +2029,12 @@ body {
     padding: 0.5rem 1.25rem;
     font-size: 0.875rem;
   }
+}
+.know-more__form .form__btn:disabled {
+  background: #95b6af;
+  border: 1px solid #95b6af;
+  pointer-events: none;
+  color: #660000;
 }
 .know-more__form .form__btn:hover, .know-more__form .form__btn:focus {
   background-color: #3e5b55;
