@@ -2,7 +2,7 @@
   position: relative;
   padding: px-to-rem(26px) 0 px-to-rem(80px);
 
-  background: url("../images/examples-bg.jpg") no-repeat center;
+  background: url("../images/blocks/examples/examples-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 
@@ -26,7 +26,7 @@
     width: 68%;
     height: 100%;
 
-    background: url("../images/examples-bg-2.png") no-repeat center;
+    background: url("../images/blocks/examples/examples-bg-2.png") no-repeat center;
     background-size: 100% 100%;
   }
 
@@ -68,7 +68,7 @@
     }
 
     &::after {
-      content: url("../images/figures/examples-curl.png");
+      content: url("../images/blocks/examples/figures/examples-curl.png");
       position: absolute;
       top: px-to-rem(-105px);
       left: px-to-rem(-166px);
@@ -76,7 +76,7 @@
       z-index: 2;
 
       @media screen and (max-width: 599px) {
-        content: url("../images/figures/examples-curl-small.png");
+        content: url("../images/blocks/examples/figures/examples-curl-small.png");
         top: px-to-rem(-39px);
         left: px-to-rem(-25px);
       }
@@ -119,7 +119,7 @@
       align-items: center;
       justify-content: center;
 
-      background: url("../images/examples-img-wrapper.png") no-repeat center;
+      background: url("../images/blocks/examples/examples-img-wrapper.png") no-repeat center;
 
       @media screen and (max-width: 599px) {
         background-size: px-to-rem(233px) 100%;
@@ -127,13 +127,17 @@
     }
 
     .swiper-image {
-      max-width: 100%;
+      max-width: px-to-rem(255px);
       height: auto;
+
+      border-radius: px-to-rem(31px);
+
       object-fit: cover;
 
       @media screen and (max-width: 599px) {
         max-width: px-to-rem(204px);
-        height: px-to-rem(443px);
+
+        border-radius: px-to-rem(23px);
       }
     }
   }

@@ -1,3 +1,44 @@
+// hide header on scroll down and show on scroll up
+(function () {
+  const doc = document.documentElement,
+    headerElement = document.querySelector('.header'),
+    headerElementHeight = parseInt(getComputedStyle(headerElement).height);
+
+  let currentScroll = null,
+    prevScroll = window.scrollY || doc.scrollTop,
+    direction = 0,
+    prevDirection = 0;
+
+  const checkRoll = () => {
+    currentScroll = window.scrollY || doc.scrollTop;
+
+    if (currentScroll > prevScroll) {
+      direction = 2;
+    } else if (currentScroll < prevScroll) {
+      direction = 1;
+    }
+
+    if (direction !== prevDirection) {
+      toggleHeader(direction, currentScroll);
+    }
+
+    prevScroll = currentScroll;
+  }
+
+  const toggleHeader = (direction, currentScroll) => {
+    if (direction === 2 && currentScroll > headerElementHeight) {
+      headerElement.classList.add('hide');
+      prevDirection = direction;
+    } else if (direction === 1) {
+      headerElement.classList.remove('hide');
+      prevDirection = direction
+    }
+  };
+
+  window.addEventListener('scroll', checkRoll)
+}());
+
+
 // smooth scroll to anchors
 const anchors = document.querySelectorAll('.header__nav-link');
 
@@ -69,7 +110,7 @@ const constraints = {
       message: '^Пожалуйста, укажите телефон'
     },
     format: {
-      pattern: '^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$',
+      pattern: /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/,
       flags: 'i',
       message: '^Пожалуйста, укажите телефон в корректном формате'
     }
@@ -92,68 +133,11 @@ const constraints = {
   }
 };
 
-const knowMoreForm = document.forms['know-more-form'],
-  nameField = knowMoreForm.elements.name,
-  phoneField = knowMoreForm.elements.phone,
-  emailField = knowMoreForm.elements.email,
-  serviceField = knowMoreForm.elements.service;
-  agreeField = knowMoreForm.elements.agree;
-  submitButton = knowMoreForm.elements.submit
+const knowMoreForm = document.forms['know-more-form'];
 
 knowMoreForm.addEventListener('submit', function(e) {
   e.preventDefault();
   submitHandler(this);
-
-  // submitButton.blur();
-  // submitButton.disabled = true;
-  //
-  // const formData = new FormData();
-  // formData.append('name', nameField.value);
-  // formData.append('phone', phoneField.value);
-  // formData.append('email', emailField.value);
-  // formData.append('service', serviceField.value);
-  // formData.append('agree', agreeField.checked);
-  //
-  // axios({
-  //   method: 'post',
-  //   url: '/mail.php',
-  //   data: formData,
-  //   headers: {
-  //     Accept: 'application/json',
-  //     'Content-Type': 'multipart/form-data',
-  //   },
-  // })
-  //   .then(response => {
-  //     submitButton.disabled = false;
-  //     knowMoreForm.reset();
-  //
-  //     if (response.data.success) {
-  //       Toastify({
-  //         text: response.data.success,
-  //         duration: 3500,
-  //         close: true,
-  //         gravity: 'top',
-  //         position: 'right',
-  //         backgroundColor: '#86aca4'
-  //       }).showToast()
-  //     } else {
-  //       const errors = Object.values(response.data.errors).reverse();
-  //
-  //       for (const error of errors) {
-  //         Toastify({
-  //           text: error,
-  //           duration: 3500,
-  //           close: true,
-  //           gravity: 'top',
-  //           position: 'right',
-  //           backgroundColor: '#bd0000'
-  //         }).showToast()
-  //       }
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.error(error)
-  //   });
 })
 
 const submitHandler = (form) => {
@@ -163,31 +147,93 @@ const submitHandler = (form) => {
   showErrors(form, errors || {});
 
   if (!errors) {
-    submitForm();
+    submitForm(form);
   }
 }
 
 const showErrors = (form, errors) => {
-  const inputs = knowMoreForm.elements;
+  const elements = [...form.elements];
+  elements.pop();
 
-  for (const input of inputs) {
-    showErrorsForInput(input, errors && errors[input.name])
-  }
-}
+  const errorElements = Object.keys(errors),
+    errorValues = Object.values(errors).flat().reverse();
 
-const showErrorsForInput = (input, errors) => {
-  const formGroup = closestParent(input.parentNode, 'form__form-group'),
-    messages = formGroup.querySelector('.form__error');
-
-  if (errors) {
-    formGroup.classList.add('has-error');
-
-    for (const error of errors) {
-      addError(messages, error);
+  elements.forEach(element => {
+    if (errorElements.includes(element.name)) {
+      element.classList.add('has-error');
+    } else if (!errorElements.includes(element.name)) {
+      element.classList.remove('has-error');
     }
-  } else {
-    formGroup.classList.add("has-success");
-  }
+  })
+
+  errorValues.forEach(errorVal => {
+    Toastify({
+      text: errorVal,
+      duration: 3500,
+      close: true,
+      gravity: 'top',
+      position: 'right',
+      backgroundColor: '#bd0000'
+    }).showToast()
+  })
 }
 
-const closestParent = () => {};
+const submitForm = (form) => {
+  const nameField = form.elements.name,
+    phoneField = form.elements.phone,
+    emailField = form.elements.email,
+    serviceField = form.elements.service,
+    agreeField = form.elements.agree,
+    submitButton = form.elements.submit;
+
+  submitButton.blur();
+  submitButton.disabled = true;
+
+  const formData = new FormData();
+  formData.append('name', nameField.value);
+  formData.append('phone', phoneField.value);
+  formData.append('email', emailField.value);
+  formData.append('service', serviceField.value);
+  formData.append('agree', agreeField.checked);
+
+  axios({
+    method: 'post',
+    url: '/mail.php',
+    data: formData,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'multipart/form-data',
+    },
+  })
+    .then(response => {
+      submitButton.disabled = false;
+      form.reset();
+
+      if (response.data.success) {
+        Toastify({
+          text: response.data.success,
+          duration: 3500,
+          close: true,
+          gravity: 'top',
+          position: 'right',
+          backgroundColor: '#86aca4'
+        }).showToast()
+      } else {
+        const errors = Object.values(response.data.errors).reverse();
+
+        for (const error of errors) {
+          Toastify({
+            text: error,
+            duration: 3500,
+            close: true,
+            gravity: 'top',
+            position: 'right',
+            backgroundColor: '#bd0000'
+          }).showToast()
+        }
+      }
+    })
+    .catch(error => {
+      console.error(error)
+    });
+}
