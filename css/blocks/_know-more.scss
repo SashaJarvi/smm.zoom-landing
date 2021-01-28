@@ -3,7 +3,7 @@
 
   padding: px-to-rem(34px) 0;
 
-  background: url("../images/know-more-bg.jpg") no-repeat center;
+  background: url("../images/blocks/know-more/know-more-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 
@@ -104,6 +104,8 @@
     }
 
     .form__form-group {
+      position: relative;
+
       margin-bottom: px-to-rem(24px);
 
       @media screen and (max-width: 599px) {
@@ -111,8 +113,6 @@
       }
 
       &--select {
-        position: relative;
-
         &::after {
           content: "";
           position: absolute;
@@ -171,8 +171,16 @@
 
       transition: border .2s ease-in-out;
 
+      &.has-error {
+        border-color: #bd0000;
+
+        &:focus {
+          border: 1px solid darken(#bd0000, 30%);
+        }
+      }
+
       &:focus {
-        border: 1px solid darken($light-green, 30%);
+        border: 1px solid darken(#a5d6cd, 30%);
       }
 
       &::placeholder {
@@ -216,6 +224,12 @@
         opacity: 0;
         appearance: none;
 
+        &.has-error {
+          & + .checkbox__fake {
+            border-color: #bd0000;
+          }
+        }
+
         &:checked + .checkbox__fake:before {
           opacity: 1;
         }
@@ -231,7 +245,9 @@
         vertical-align: bottom;
 
         background: #f5fbfb;
-        border: none;
+        border: 1px solid transparent;
+
+        transition: border .2s ease-in-out;
 
         &::before {
           content: "";
@@ -242,7 +258,7 @@
           width: px-to-rem(28px);
           height: px-to-rem(22px);
 
-          background: url("../images/check.svg") no-repeat center;
+          background: url("../images/figures/check.svg") no-repeat center;
 
           opacity: 0;
           transition: opacity .2s ease-in-out;
@@ -273,6 +289,12 @@
         padding: px-to-rem(8px) px-to-rem(20px);
 
         font-size: px-to-rem(14px);
+      }
+
+      &:disabled {
+        background: lighten($light-green, 5%);
+        border: 1px solid lighten($light-green, 5%);
+        pointer-events: none;
       }
 
       &:hover, &:focus {

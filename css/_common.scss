@@ -100,3 +100,11 @@ body {
   width: px-to-rem(29px);
   height: px-to-rem(29px);
 }
+
+.toastify {
+  @media screen and (max-width: 413px) {
+    max-width: px-to-rem(300px);
+
+    font-size: px-to-rem(14px);
+  }
+}
