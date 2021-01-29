@@ -138,6 +138,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+button {
+  outline: none;
+}
+
 body {
   min-width: 20rem;
   color: #2d2b2b;
@@ -1287,7 +1291,7 @@ body {
   }
 }
 .examples__title::after {
-  content: url("../images/blocks/examples/figures/examples-curl.png");
+  content: url("../images/figures/examples-curl.png");
   position: absolute;
   top: -6.5625rem;
   left: -10.375rem;
