@@ -290,10 +290,15 @@ body {
   align-items: center;
   flex: 1;
 }
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1099px) {
   .header__nav-list {
-    width: 48.125rem;
+    width: 56.25rem;
     padding: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .header__nav-list {
+    width: 48rem;
   }
 }
 .header__nav-item {
