@@ -72,9 +72,13 @@
     align-items: center;
     flex: 1;
 
-    @media screen and (max-width: 1079px) {
-      width: px-to-rem(770px);
+    @media screen and (max-width: 1099px) {
+      width: px-to-rem(900px);
       padding: 0;
+    }
+
+    @media screen and (max-width: 599px) {
+      width: px-to-rem(768px);
     }
   }
 
