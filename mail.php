@@ -3,7 +3,8 @@ require_once('ParseEnv.php');
 
 (new ParseEnv(__DIR__ . '/.env'))->load();
 
-$recipient = getenv('RECIPIENT_EMAIL');
+$tg_token = getenv('TELEGRAM_TOKEN');
+$tg_chatid = getenv('TELEGRAM_CHATID');
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
   $response = [];
@@ -41,36 +42,29 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   }
 
   if (empty($response['errors'])) {
-    $headers = array(
-      'From' => $email,
-      'Reply-To' => $email,
-      'MIME-Version' => '1.0',
-      'Content-Type'=> 'text/html; charset=utf-8'
-    );
-
-    $subject = "Заказ услуги $service с сайта smmzoom.ru";
-
-    $emailBody = "
-      <html lang='ru'>
-      <body>
-        <p>Добрый день! Меня зовут $name, и я хотел бы заказать у вас следующую услугу: <b>$service</b></p>
-
-        <br><br>
-
-        <p>С уважением, $name</p>
-        <p>Телефон для связи: $phone</p>
-      </body>
-      </html>
-    ";
-
     $isSent = false;
 
-    if (mail($recipient, $subject, $emailBody, $headers)) {
+    $data = [
+      'chat_id' => $tg_chatid,
+      'text' =>
+      "Здравствуйте! Меня зовут <b>$name</b>, и я хотел бы заказать у вас следующую услугу: <b>$service</b>" . PHP_EOL .
+      PHP_EOL .
+      "С уважением, $name". PHP_EOL .
+      "Email для связи: $email" . PHP_EOL .
+      "Телефон для связи: $phone",
+      'parse_mode' => 'HTML'
+    ];
+
+    $resp = file_get_contents("https://api.telegram.org/bot" . $tg_token . "/sendMessage?" . http_build_query($data));
+
+    if ($resp) {
       $isSent = true;
     }
 
     if ($isSent) {
       $response['success'] = 'Спасибо, что написали нам!';
+    } else {
+      $response['errors']['smth_wrong'] = 'Что-то пошло не так, попробуйте снова';
     }
   }
 
