@@ -2245,6 +2245,39 @@ body {
   flood-color: #3e5b55;
 }
 
+.thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #b7ded7;
+}
+.thanks__content {
+  text-align: center;
+}
+.thanks__title {
+  margin-bottom: 3.125rem;
+  font-family: "Caveat Bold", sans-serif;
+  font-size: 9rem;
+}
+@media screen and (max-width: 599px) {
+  .thanks__title {
+    margin-bottom: 2rem;
+    font-size: 6rem;
+  }
+}
+.thanks__link {
+  font-size: 1.875rem;
+}
+@media screen and (max-width: 599px) {
+  .thanks__link {
+    font-size: 1.375rem;
+  }
+}
+.thanks__link:hover, .thanks__link:focus {
+  text-decoration: underline;
+}
+
 .footer {
   position: relative;
   padding: 5rem 0 2.125rem;

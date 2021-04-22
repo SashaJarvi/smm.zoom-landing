@@ -210,14 +210,7 @@ const submitForm = (form) => {
       form.reset();
 
       if (response.data.success) {
-        Toastify({
-          text: response.data.success,
-          duration: 3500,
-          close: true,
-          gravity: 'top',
-          position: 'right',
-          backgroundColor: '#86aca4'
-        }).showToast()
+        window.location.href = '/thanks.html';
       } else {
         const errors = Object.values(response.data.errors).reverse();
 
